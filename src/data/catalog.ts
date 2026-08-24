@@ -282,12 +282,12 @@ export const occasions = collections.map((c) => ({
   tagline: c.tagline,
 }));
 
-export function formatPrice(amountMinor: number): string {
+export function formatPrice(amount: number): string {
   return new Intl.NumberFormat("en-NG", {
     style: "currency",
     currency: "NGN",
     maximumFractionDigits: 0,
-  }).format(amountMinor / 100);
+  }).format(amount);
 }
 
 export function getProduct(slug: string): Product | undefined {

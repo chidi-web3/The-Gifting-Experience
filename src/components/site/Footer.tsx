@@ -4,7 +4,7 @@ import { collections } from "@/data/catalog";
 
 export function Footer() {
   return (
-    <footer className="mt-32 border-t border-border bg-card/40">
+    <footer className="border-t border-border bg-card/40">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <img

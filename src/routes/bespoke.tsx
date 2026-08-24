@@ -35,9 +35,9 @@ const occasionOptions = [
 
 const bands = [
   { id: "band-1", label: "Up to ₦50,000 per box", min: 0 },
-  { id: "band-2", label: "₦50,000 – ₦120,000 per box", min: 5000000 },
-  { id: "band-3", label: "₦120,000 – ₦250,000 per box", min: 12000000 },
-  { id: "band-4", label: "₦250,000 and above", min: 25000000 },
+  { id: "band-2", label: "₦50,000 – ₦120,000 per box", min: 50000 },
+  { id: "band-3", label: "₦120,000 – ₦250,000 per box", min: 120000 },
+  { id: "band-4", label: "₦250,000 and above", min: 250000 },
 ];
 
 const steps = [

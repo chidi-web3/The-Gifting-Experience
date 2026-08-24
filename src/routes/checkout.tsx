@@ -36,7 +36,7 @@ function CheckoutPage() {
   const navigate = useNavigate();
   const [placed, setPlaced] = useState(false);
 
-  const delivery = lines.length > 0 ? 750000 : 0;
+  const delivery = lines.length > 0 ? 7500 : 0;
 
   if (placed) {
     return (

@@ -29,9 +29,9 @@ export const Route = createFileRoute("/collections/$slug")({
     return {
       meta: [
         { title },
-        { name: "description", content: collection.description },
+        { name: "description", content: collection.story },
         { property: "og:title", content: title },
-        { property: "og:description", content: collection.description },
+        { property: "og:description", content: collection.story },
       ],
     };
   },
@@ -47,7 +47,7 @@ function CollectionPage() {
       <PageHeader
         eyebrow={collection.tagline}
         title={collection.name}
-        intro={collection.description}
+        intro={collection.story}
       />
 
       <Container className="py-12">
