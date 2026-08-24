@@ -7,16 +7,16 @@ import { Reveal } from "@/components/site/Reveal";
 export const Route = createFileRoute("/collections/")({
   head: () => ({
     meta: [
-      { title: "Collections — de-fi Gifts, Souvenirs & Hampers" },
+      { title: "Collections — DEFI Gifting Solutions" },
       {
         name: "description",
         content:
-          "Browse every de-fi gift box and hamper — wedding favours, corporate gifting, birthdays, festive hampers and keepsake souvenirs.",
+          "Browse every DEFI Gifting Solutions box and hamper — wedding favours, corporate gifting, birthdays, festive hampers and keepsake souvenirs.",
       },
-      { property: "og:title", content: "Collections — de-fi" },
+      { property: "og:title", content: "Collections — DEFI Gifting Solutions" },
       {
         property: "og:description",
-        content: "Every de-fi gift box and hamper, arranged by occasion.",
+        content: "Every gift box and hamper, arranged by occasion.",
       },
     ],
   }),
@@ -27,7 +27,7 @@ function CollectionsIndex() {
   return (
     <>
       <PageHeader
-        eyebrow="The full house"
+        eyebrow="DEFI Gifting Solutions"
         title="Every gift we make, arranged by occasion."
         intro="Each box is assembled to order in the studio. Choose one as it stands, or ask us to build around it."
       />

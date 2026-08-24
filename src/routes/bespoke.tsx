@@ -8,13 +8,13 @@ import { Reveal } from "@/components/site/Reveal";
 export const Route = createFileRoute("/bespoke")({
   head: () => ({
     meta: [
-      { title: "Bespoke Hampers — de-fi" },
+      { title: "Bespoke Hampers — DEFI Gifting Solutions" },
       {
         name: "description",
         content:
-          "Commission a bespoke de-fi hamper — tell us the occasion, budget and quantity and we'll build the box around it.",
+          "Commission a bespoke hamper from DEFI Gifting Solutions — tell us the occasion, budget and quantity and we'll build the box around it.",
       },
-      { property: "og:title", content: "Bespoke Hampers — de-fi" },
+      { property: "og:title", content: "Bespoke Hampers — DEFI Gifting Solutions" },
       {
         property: "og:description",
         content: "Commission a hamper built around your occasion and budget.",
@@ -24,14 +24,7 @@ export const Route = createFileRoute("/bespoke")({
   component: BespokePage,
 });
 
-const occasionOptions = [
-  "Wedding",
-  "Corporate",
-  "Birthday",
-  "Festive",
-  "Thank you",
-  "Other",
-];
+const occasionOptions = ["Wedding", "Corporate", "Birthday", "Festive", "Thank you", "Other"];
 
 const bands = [
   { id: "band-1", label: "Up to ₦50,000 per box", min: 0 },
@@ -56,7 +49,7 @@ function BespokePage() {
   return (
     <>
       <PageHeader
-        eyebrow="Bespoke"
+        eyebrow="DEFI Gifting Solutions"
         title="Tell us the occasion. We'll build the box around it."
         intro="From one anniversary box to two hundred conference hampers — same hands, same ribbon."
       />
@@ -67,9 +60,7 @@ function BespokePage() {
             <Reveal as="li" key={n} delay={i * 80} className="bg-background p-8">
               <span className="font-display text-4xl text-primary">{n}</span>
               <h2 className="mt-4 font-display text-2xl">{title}</h2>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                {body}
-              </p>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{body}</p>
             </Reveal>
           ))}
         </ol>
@@ -186,17 +177,15 @@ function BespokePage() {
 
           <aside className="h-fit rounded-sm border border-border/70 bg-card/40 p-8">
             <p className="eyebrow">Working estimate</p>
-            <p className="mt-6 font-display text-4xl text-primary">
-              from {formatPrice(estimate)}
-            </p>
+            <p className="mt-6 font-display text-4xl text-primary">from {formatPrice(estimate)}</p>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              {qty} {qty === 1 ? "box" : "boxes"} for {occasion.toLowerCase()}.
-              A guide only — we'll send exact pricing with the concept.
+              {qty} {qty === 1 ? "box" : "boxes"} for {occasion.toLowerCase()}. A guide only — we'll
+              send exact pricing with the concept.
             </p>
             <div className="rule-gold my-7" />
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Volume orders over 100 boxes are quoted with a dedicated packing
-              schedule and staged delivery.
+              Volume orders over 100 boxes are quoted with a dedicated packing schedule and staged
+              delivery.
             </p>
           </aside>
         </div>

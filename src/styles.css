@@ -5,7 +5,12 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * de-fi design system — deep luxe purple & gold.
+ * DEFI GROUP design system.
+ * Warm-white base, deep brown/charcoal neutrals. Each business arm carries
+ * a controlled accent identity:
+ *   Gifting Solutions — purple + yellow (premium, celebratory)
+ *   Epic Taste        — brown (rich, warm, culinary)
+ *   DEFI Experiences  — army green (adventurous, experiential)
  * All colours are oklch tokens; never hardcode colours in components.
  */
 
@@ -41,11 +46,22 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-ring-offset-background: var(--background);
-  --color-gold: var(--gold);
-  --color-gold-soft: var(--gold-soft);
-  --color-plum: var(--plum);
+
+  /* group neutrals */
   --color-ink: var(--ink);
   --color-ivory: var(--ivory);
+  --color-bronze: var(--bronze);
+  --color-bronze-deep: var(--bronze-deep);
+
+  /* business arm identities */
+  --color-gifting: var(--gifting);
+  --color-gifting-gold: var(--gifting-gold);
+  --color-gifting-soft: var(--gifting-soft);
+  --color-taste: var(--taste);
+  --color-taste-soft: var(--taste-soft);
+  --color-exp: var(--exp);
+  --color-exp-soft: var(--exp-soft);
+
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -64,62 +80,75 @@
 :root {
   --radius: 0.25rem;
 
-  --ink: oklch(0.17 0.13 300);
-  --plum: oklch(0.28 0.16 302);
-  --ivory: oklch(0.96 0.012 85);
-  --gold: oklch(0.83 0.16 88);
-  --gold-soft: oklch(0.9 0.09 90);
+  /* group neutrals — warm white base, deep brown/charcoal ink */
+  --ink: oklch(0.24 0.02 55);
+  --ivory: oklch(0.975 0.007 85);
+  --bronze: oklch(0.58 0.1 72);
+  --bronze-deep: oklch(0.45 0.09 68);
 
-  --background: oklch(0.21 0.15 301);
-  --foreground: oklch(0.96 0.012 85);
-  --card: oklch(0.26 0.15 302);
-  --card-foreground: oklch(0.96 0.012 85);
-  --popover: oklch(0.24 0.15 302);
-  --popover-foreground: oklch(0.96 0.012 85);
-  --primary: oklch(0.83 0.16 88);
-  --primary-foreground: oklch(0.19 0.14 301);
-  --secondary: oklch(0.3 0.14 302);
-  --secondary-foreground: oklch(0.96 0.012 85);
-  --muted: oklch(0.29 0.13 302);
-  --muted-foreground: oklch(0.78 0.045 300);
-  --accent: oklch(0.33 0.15 302);
-  --accent-foreground: oklch(0.96 0.012 85);
-  --destructive: oklch(0.6 0.21 22);
-  --destructive-foreground: oklch(0.98 0.01 85);
-  --border: oklch(0.98 0.02 90 / 14%);
-  --input: oklch(0.98 0.02 90 / 18%);
-  --ring: oklch(0.83 0.16 88 / 60%);
+  /* arm — gifting solutions (purple + yellow) */
+  --gifting: oklch(0.44 0.15 297);
+  --gifting-gold: oklch(0.8 0.15 88);
+  --gifting-soft: oklch(0.955 0.03 300);
 
-  --chart-1: oklch(0.83 0.16 88);
-  --chart-2: oklch(0.7 0.14 320);
-  --chart-3: oklch(0.6 0.15 280);
-  --chart-4: oklch(0.75 0.1 60);
-  --chart-5: oklch(0.5 0.16 310);
+  /* arm — epic taste (brown) */
+  --taste: oklch(0.42 0.09 52);
+  --taste-soft: oklch(0.955 0.02 65);
 
-  --sidebar: oklch(0.24 0.15 302);
-  --sidebar-foreground: oklch(0.96 0.012 85);
-  --sidebar-primary: oklch(0.83 0.16 88);
-  --sidebar-primary-foreground: oklch(0.19 0.14 301);
-  --sidebar-accent: oklch(0.3 0.14 302);
-  --sidebar-accent-foreground: oklch(0.96 0.012 85);
-  --sidebar-border: oklch(0.98 0.02 90 / 14%);
-  --sidebar-ring: oklch(0.83 0.16 88 / 60%);
+  /* arm — experiences (army green) */
+  --exp: oklch(0.44 0.07 135);
+  --exp-soft: oklch(0.95 0.025 130);
 
-  --gradient-foil: linear-gradient(
+  --background: var(--ivory);
+  --foreground: oklch(0.26 0.02 55);
+  --card: oklch(0.995 0.003 85);
+  --card-foreground: oklch(0.26 0.02 55);
+  --popover: oklch(0.99 0.004 85);
+  --popover-foreground: oklch(0.26 0.02 55);
+  --primary: oklch(0.27 0.03 55);
+  --primary-foreground: oklch(0.98 0.008 85);
+  --secondary: oklch(0.93 0.012 75);
+  --secondary-foreground: oklch(0.3 0.03 55);
+  --muted: oklch(0.94 0.01 80);
+  --muted-foreground: oklch(0.48 0.02 60);
+  --accent: oklch(0.93 0.015 78);
+  --accent-foreground: oklch(0.3 0.03 55);
+  --destructive: oklch(0.58 0.21 22);
+  --destructive-foreground: oklch(0.99 0.005 85);
+  --border: oklch(0.4 0.03 55 / 14%);
+  --input: oklch(0.4 0.03 55 / 20%);
+  --ring: oklch(0.45 0.09 68 / 45%);
+
+  --chart-1: var(--gifting);
+  --chart-2: var(--taste);
+  --chart-3: var(--exp);
+  --chart-4: var(--gifting-gold);
+  --chart-5: var(--bronze);
+
+  --sidebar: oklch(0.96 0.008 82);
+  --sidebar-foreground: oklch(0.26 0.02 55);
+  --sidebar-primary: oklch(0.27 0.03 55);
+  --sidebar-primary-foreground: oklch(0.98 0.008 85);
+  --sidebar-accent: oklch(0.93 0.012 75);
+  --sidebar-accent-foreground: oklch(0.3 0.03 55);
+  --sidebar-border: oklch(0.4 0.03 55 / 14%);
+  --sidebar-ring: oklch(0.45 0.09 68 / 45%);
+
+  /* metallic bronze for display accents on light ground */
+  --gradient-bronze: linear-gradient(
     100deg,
-    oklch(0.72 0.13 78),
-    oklch(0.93 0.11 92),
-    oklch(0.8 0.15 85),
-    oklch(0.96 0.06 95)
+    oklch(0.52 0.1 68),
+    oklch(0.72 0.11 82),
+    oklch(0.56 0.1 74),
+    oklch(0.66 0.09 80)
   );
   --gradient-veil: linear-gradient(
     180deg,
-    oklch(0.21 0.15 301 / 0),
-    oklch(0.19 0.14 301 / 0.55) 55%,
-    oklch(0.17 0.13 300 / 0.95)
+    oklch(0.2 0.03 55 / 0),
+    oklch(0.2 0.03 55 / 0.35) 55%,
+    oklch(0.18 0.03 55 / 0.8)
   );
-  --shadow-lift: 0 24px 60px -24px oklch(0.1 0.1 300 / 0.85);
-  --shadow-foil: 0 0 0 1px oklch(0.83 0.16 88 / 0.28);
+  --shadow-lift: 0 24px 50px -28px oklch(0.3 0.04 55 / 0.35);
 }
 
 .dark {
@@ -152,28 +181,24 @@
   }
 }
 
-@utility foil-text {
-  background-image: var(--gradient-foil);
+@utility bronze-text {
+  background-image: var(--gradient-bronze);
   background-clip: text;
   color: transparent;
 }
 
+/* Kept as `rule-gold` for continuity with the gifting storefront. */
 @utility rule-gold {
   height: 1px;
   width: 100%;
-  background-image: linear-gradient(
-    90deg,
-    transparent,
-    oklch(0.83 0.16 88 / 0.55),
-    transparent
-  );
+  background-image: linear-gradient(90deg, transparent, oklch(0.45 0.09 68 / 0.4), transparent);
 }
 
 @utility eyebrow {
   font-size: 0.6875rem;
   letter-spacing: 0.34em;
   text-transform: uppercase;
-  color: var(--gold-soft);
+  color: var(--bronze-deep);
 }
 
 @utility veil {

@@ -24,13 +24,13 @@ export const Route = createFileRoute("/product/$slug")({
     if (!loaderData) {
       return {
         meta: [
-          { title: "Gift not found — de-fi" },
+          { title: "Gift not found — DEFI Gifting Solutions" },
           { name: "robots", content: "noindex" },
         ],
       };
     }
     const { product } = loaderData;
-    const title = `${product.name} — de-fi`;
+    const title = `${product.name} — DEFI Gifting Solutions`;
     return {
       meta: [
         { title },
@@ -83,9 +83,7 @@ function ProductPage() {
           </Reveal>
 
           <Reveal delay={100}>
-            <h1 className="font-display text-5xl leading-tight sm:text-6xl">
-              {product.name}
-            </h1>
+            <h1 className="font-display text-5xl leading-tight sm:text-6xl">{product.name}</h1>
             <p className="mt-5 text-xl text-primary">{formatPrice(product.price)}</p>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
               {product.description}
@@ -162,8 +160,8 @@ function ProductPage() {
             </div>
 
             <p className="mt-8 text-xs leading-relaxed text-muted-foreground">
-              Packed by hand within 48 hours. Nationwide delivery, with a
-              handwritten note included at checkout at no extra cost.
+              Packed by hand within 48 hours. Nationwide delivery, with a handwritten note included
+              at checkout at no extra cost.
             </p>
           </Reveal>
         </div>
@@ -172,9 +170,7 @@ function ProductPage() {
       {related.length > 0 && (
         <Container className="pb-24">
           <div className="rule-gold" />
-          <h2 className="mt-14 font-display text-3xl sm:text-4xl">
-            Others from this collection
-          </h2>
+          <h2 className="mt-14 font-display text-3xl sm:text-4xl">Others from this collection</h2>
           <div className="mt-10 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((p, i) => (
               <ProductCard key={p.slug} product={p} delay={i * 80} />
