@@ -21,16 +21,16 @@ function NotFoundComponent() {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <p className="eyebrow">404</p>
-        <h1 className="mt-4 font-display text-5xl">This gift isn't here</h1>
+        <h1 className="mt-4 font-display text-5xl">This page isn't here</h1>
         <p className="mt-3 text-sm text-muted-foreground">
-          The page you're looking for has been moved or wrapped away.
+          The page you're looking for has moved or doesn't exist yet.
         </p>
         <div className="mt-8">
           <Link
             to="/"
             className="inline-flex items-center justify-center rounded-sm bg-primary px-6 py-3 text-xs uppercase tracking-[0.2em] text-primary-foreground transition-opacity hover:opacity-90"
           >
-            Back to the studio
+            Back to DEFI GROUP
           </Link>
         </div>
       </div>
@@ -79,13 +79,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "de-fi — Gifts. Souvenirs. Hampers." },
+      { title: "DEFI GROUP — Building Brands. Creating Experiences. Making Impact." },
       {
         name: "description",
         content:
-          "Premium hand-tied gifts, souvenirs and hampers for weddings, corporate gifting and celebrations.",
+          "DEFI GROUP builds a portfolio of businesses and brands — DEFI Gifting Solutions, Epic Taste and DEFI Experiences.",
       },
-      { name: "author", content: "de-fi" },
+      { name: "author", content: "DEFI GROUP" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

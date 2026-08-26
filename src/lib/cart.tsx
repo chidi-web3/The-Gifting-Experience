@@ -53,21 +53,14 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (!hydrated) return;
-    localStorage.setItem(
-      STORAGE_KEY,
-      JSON.stringify({ lines, note: giftNote }),
-    );
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({ lines, note: giftNote }));
   }, [lines, giftNote, hydrated]);
 
   const add = useCallback((line: CartLine) => {
     setLines((current) => {
-      const existing = current.find(
-        (l) => l.slug === line.slug && l.wrap === line.wrap,
-      );
+      const existing = current.find((l) => l.slug === line.slug && l.wrap === line.wrap);
       if (existing) {
-        return current.map((l) =>
-          l === existing ? { ...l, qty: l.qty + line.qty } : l,
-        );
+        return current.map((l) => (l === existing ? { ...l, qty: l.qty + line.qty } : l));
       }
       return [...current, line];
     });

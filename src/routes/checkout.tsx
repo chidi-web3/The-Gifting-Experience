@@ -8,15 +8,15 @@ import { Container, PageHeader } from "@/components/site/Section";
 export const Route = createFileRoute("/checkout")({
   head: () => ({
     meta: [
-      { title: "Checkout — de-fi" },
+      { title: "Checkout — DEFI Gifting Solutions" },
       {
         name: "description",
-        content: "Complete your de-fi gift order — delivery details and gift note.",
+        content: "Complete your DEFI Gifting gift order — delivery details and gift note.",
       },
-      { property: "og:title", content: "Checkout — de-fi" },
+      { property: "og:title", content: "Checkout — DEFI Gifting Solutions" },
       {
         property: "og:description",
-        content: "Complete your de-fi gift order.",
+        content: "Complete your DEFI Gifting gift order.",
       },
       { name: "robots", content: "noindex" },
     ],
@@ -44,8 +44,8 @@ function CheckoutPage() {
         <PageHeader eyebrow="Order received" title="It's in the studio now." />
         <Container className="py-20">
           <p className="max-w-lg text-sm leading-relaxed text-muted-foreground">
-            Thank you. We'll confirm your order by email within a few hours and
-            share a photograph of the finished box before it leaves us.
+            Thank you. We'll confirm your order by email within a few hours and share a photograph
+            of the finished box before it leaves us.
           </p>
           <Link
             to="/"
@@ -138,8 +138,8 @@ function CheckoutPage() {
             Place order
           </button>
           <p className="text-xs leading-relaxed text-muted-foreground">
-            We confirm every order personally before taking payment, so nothing
-            is charged at this step.
+            We confirm every order personally before taking payment, so nothing is charged at this
+            step.
           </p>
         </form>
 

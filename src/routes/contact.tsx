@@ -1,22 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { toast } from "sonner";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { group } from "@/data/group";
 import { Container, PageHeader } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact the Studio — de-fi" },
+      { title: "Contact — DEFI GROUP" },
       {
         name: "description",
         content:
-          "Talk to the de-fi studio about gifts, souvenirs, hampers, volume orders and delivery dates.",
+          "Reach DEFI GROUP about gifting, food, experiences, partnerships or general business enquiries.",
       },
-      { property: "og:title", content: "Contact the Studio — de-fi" },
+      { property: "og:title", content: "Contact — DEFI GROUP" },
       {
         property: "og:description",
-        content: "Talk to the de-fi studio about gifting and volume orders.",
+        content: "A person replies within one working day.",
       },
     ],
   }),
@@ -24,10 +25,18 @@ export const Route = createFileRoute("/contact")({
 });
 
 const details = [
-  { Icon: Mail, label: "Email", value: "hello@de-fi.gifts" },
-  { Icon: Phone, label: "Phone & WhatsApp", value: "+234 800 000 0000" },
-  { Icon: MapPin, label: "Studio", value: "By appointment — Lagos" },
+  { Icon: Mail, label: "Email", value: group.email },
+  { Icon: Phone, label: "Phone & WhatsApp", value: group.phone },
+  { Icon: MapPin, label: "Head office", value: `${group.location} — by appointment` },
   { Icon: Clock, label: "Hours", value: "Mon–Sat, 9am – 6pm" },
+];
+
+const enquiryOptions = [
+  "DEFI Gifting Solutions",
+  "Epic Taste",
+  "DEFI Experiences",
+  "Partnerships & corporate",
+  "General enquiry",
 ];
 
 function ContactPage() {
@@ -35,8 +44,8 @@ function ContactPage() {
     <>
       <PageHeader
         eyebrow="Contact"
-        title="Talk to the studio."
-        intro="Questions about a box, a date, a budget or a hundred hampers — write to us and a person answers."
+        title="Talk to DEFI."
+        intro="One message reaches the whole group. Tell us which business it concerns and the right team will reply — usually within one working day."
       />
 
       <Container className="grid gap-14 py-16 lg:grid-cols-[1.4fr_1fr]">
@@ -57,7 +66,7 @@ function ContactPage() {
                 id="c-name"
                 required
                 autoComplete="name"
-                className="mt-3 w-full rounded-sm border border-border bg-transparent px-4 py-3 text-sm outline-none focus:border-primary"
+                className="mt-3 w-full rounded-sm border border-input bg-transparent px-4 py-3 text-sm outline-none focus:border-primary"
               />
             </div>
             <div>
@@ -69,9 +78,25 @@ function ContactPage() {
                 type="email"
                 required
                 autoComplete="email"
-                className="mt-3 w-full rounded-sm border border-border bg-transparent px-4 py-3 text-sm outline-none focus:border-primary"
+                className="mt-3 w-full rounded-sm border border-input bg-transparent px-4 py-3 text-sm outline-none focus:border-primary"
               />
             </div>
+          </div>
+          <div>
+            <label htmlFor="c-topic" className="eyebrow block">
+              Which business is this about?
+            </label>
+            <select
+              id="c-topic"
+              defaultValue={enquiryOptions[0]}
+              className="mt-3 w-full appearance-none rounded-sm border border-input bg-transparent px-4 py-3 text-sm outline-none focus:border-primary"
+            >
+              {enquiryOptions.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
           </div>
           <div>
             <label htmlFor="c-subject" className="eyebrow block">
@@ -79,7 +104,7 @@ function ContactPage() {
             </label>
             <input
               id="c-subject"
-              className="mt-3 w-full rounded-sm border border-border bg-transparent px-4 py-3 text-sm outline-none focus:border-primary"
+              className="mt-3 w-full rounded-sm border border-input bg-transparent px-4 py-3 text-sm outline-none focus:border-primary"
             />
           </div>
           <div>
@@ -90,7 +115,7 @@ function ContactPage() {
               id="c-message"
               rows={6}
               required
-              className="mt-3 w-full rounded-sm border border-border bg-transparent p-4 text-sm outline-none focus:border-primary"
+              className="mt-3 w-full rounded-sm border border-input bg-transparent p-4 text-sm outline-none focus:border-primary"
             />
           </div>
           <button
@@ -101,12 +126,12 @@ function ContactPage() {
           </button>
         </form>
 
-        <aside className="h-fit rounded-sm border border-border/70 bg-card/40 p-8">
-          <p className="eyebrow">Studio details</p>
+        <aside className="h-fit rounded-sm border border-border/70 bg-card/50 p-8">
+          <p className="eyebrow">Group details</p>
           <ul className="mt-7 space-y-7">
             {details.map(({ Icon, label, value }, i) => (
               <Reveal as="li" key={label} delay={i * 70} className="flex gap-4">
-                <Icon className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden />
+                <Icon className="mt-0.5 size-4 shrink-0 text-bronze-deep" aria-hidden />
                 <div>
                   <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
                     {label}
@@ -118,8 +143,8 @@ function ContactPage() {
           </ul>
           <div className="rule-gold my-8" />
           <p className="text-sm leading-relaxed text-muted-foreground">
-            For weddings and corporate programmes, share your date and headcount
-            in the first message — it lets us quote in one reply.
+            For partnerships and volume programmes, share your dates and quantities in the first
+            message — it lets us route your enquiry and quote in one reply.
           </p>
         </aside>
       </Container>

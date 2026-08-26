@@ -1,10 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import {
-  collections,
-  getCollection,
-  productsIn,
-  type CollectionSlug,
-} from "@/data/catalog";
+import { collections, getCollection, productsIn, type CollectionSlug } from "@/data/catalog";
 import { ProductCard } from "@/components/site/ProductCard";
 import { Container, PageHeader } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
@@ -19,13 +14,13 @@ export const Route = createFileRoute("/collections/$slug")({
     if (!loaderData) {
       return {
         meta: [
-          { title: "Collection not found — de-fi" },
+          { title: "Collection not found — DEFI Gifting Solutions" },
           { name: "robots", content: "noindex" },
         ],
       };
     }
     const { collection } = loaderData;
-    const title = `${collection.name} Gifts & Hampers — de-fi`;
+    const title = `${collection.name} Gifts & Hampers — DEFI Gifting Solutions`;
     return {
       meta: [
         { title },
@@ -44,11 +39,7 @@ function CollectionPage() {
 
   return (
     <>
-      <PageHeader
-        eyebrow={collection.tagline}
-        title={collection.name}
-        intro={collection.story}
-      />
+      <PageHeader eyebrow={collection.tagline} title={collection.name} intro={collection.story} />
 
       <Container className="py-12">
         <Reveal className="flex flex-wrap gap-3">

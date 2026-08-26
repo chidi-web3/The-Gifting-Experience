@@ -8,12 +8,7 @@ import chocolate from "@/assets/gift-chocolate.jpg";
 import fragrance from "@/assets/gift-fragrance.jpg";
 import hero from "@/assets/hero-hamper.jpg";
 
-export type CollectionSlug =
-  | "weddings"
-  | "corporate"
-  | "birthdays"
-  | "festive"
-  | "thank-you";
+export type CollectionSlug = "weddings" | "corporate" | "birthdays" | "festive" | "thank-you";
 
 export interface Collection {
   slug: CollectionSlug;
@@ -222,12 +217,7 @@ export const products: Product[] = [
     blurb: "A fragrance and candle pairing for the quiet end of the year.",
     description:
       "Amber, resin and a little smoke. The bottle and the candle share a scent, so the room and the person carry the same trace.",
-    contents: [
-      "50ml eau de parfum",
-      "Gold-lidded scented candle",
-      "Velvet pouch",
-      "Scent card",
-    ],
+    contents: ["50ml eau de parfum", "Gold-lidded scented candle", "Velvet pouch", "Scent card"],
     image: fragrance,
     featured: true,
   },
@@ -239,12 +229,7 @@ export const products: Product[] = [
     blurb: "One candle, one card, one length of gold twine.",
     description:
       "The smallest gift we make and one of the most requested. A candle wrapped in purple paper, tied with gold twine and a sprig of dried lavender.",
-    contents: [
-      "Soy candle",
-      "Dried lavender sprig",
-      "Letterpressed card",
-      "Gold twine",
-    ],
+    contents: ["Soy candle", "Dried lavender sprig", "Letterpressed card", "Gold twine"],
     image: thankyou,
   },
   {
@@ -255,12 +240,7 @@ export const products: Product[] = [
     blurb: "Chocolate and candlelight, wrapped as a pair.",
     description:
       "When a note isn't quite enough. Truffles and a candle boxed together, ribboned in gold, with space for a handwritten card.",
-    contents: [
-      "6 artisan truffles",
-      "Travel-size candle",
-      "Handwritten card",
-      "Purple gift box",
-    ],
+    contents: ["6 artisan truffles", "Travel-size candle", "Handwritten card", "Purple gift box"],
     image: chocolate,
   },
   {

@@ -2,20 +2,10 @@ import { Link } from "@tanstack/react-router";
 import { formatPrice, type Product } from "@/data/catalog";
 import { Reveal } from "./Reveal";
 
-export function ProductCard({
-  product,
-  delay = 0,
-}: {
-  product: Product;
-  delay?: number;
-}) {
+export function ProductCard({ product, delay = 0 }: { product: Product; delay?: number }) {
   return (
     <Reveal as="article" delay={delay} className="group">
-      <Link
-        to="/product/$slug"
-        params={{ slug: product.slug }}
-        className="block"
-      >
+      <Link to="/product/$slug" params={{ slug: product.slug }} className="block">
         <div className="relative overflow-hidden rounded-sm border border-border/70 bg-card">
           <img
             src={product.image}
@@ -34,13 +24,9 @@ export function ProductCard({
         </div>
         <div className="mt-5 flex items-baseline justify-between gap-4">
           <h3 className="font-display text-2xl leading-tight">{product.name}</h3>
-          <span className="shrink-0 text-sm text-primary">
-            {formatPrice(product.price)}
-          </span>
+          <span className="shrink-0 text-sm text-primary">{formatPrice(product.price)}</span>
         </div>
-        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-          {product.blurb}
-        </p>
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{product.blurb}</p>
       </Link>
     </Reveal>
   );

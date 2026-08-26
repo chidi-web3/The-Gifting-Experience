@@ -7,15 +7,15 @@ import { Container, PageHeader } from "@/components/site/Section";
 export const Route = createFileRoute("/cart")({
   head: () => ({
     meta: [
-      { title: "Your bag — de-fi" },
+      { title: "Your bag — DEFI Gifting Solutions" },
       {
         name: "description",
-        content: "Review the gifts in your de-fi bag and add a handwritten note.",
+        content: "Review the gifts in your DEFI Gifting bag and add a handwritten note.",
       },
-      { property: "og:title", content: "Your bag — de-fi" },
+      { property: "og:title", content: "Your bag — DEFI Gifting Solutions" },
       {
         property: "og:description",
-        content: "Review the gifts in your de-fi bag before checkout.",
+        content: "Review the gifts in your DEFI Gifting bag before checkout.",
       },
     ],
   }),
@@ -31,8 +31,8 @@ function CartPage() {
         <PageHeader eyebrow="Your bag" title="Nothing wrapped yet." />
         <Container className="py-20">
           <p className="max-w-md text-sm leading-relaxed text-muted-foreground">
-            Your bag is empty. Start with the house selection, or tell us what
-            you have in mind and we'll build it.
+            Your bag is empty. Start with the house selection, or tell us what you have in mind and
+            we'll build it.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
@@ -120,18 +120,11 @@ function CartPage() {
           <p className="eyebrow">Summary</p>
           <div className="mt-6 flex items-baseline justify-between">
             <span className="text-sm text-muted-foreground">Subtotal</span>
-            <span className="font-display text-3xl text-primary">
-              {formatPrice(subtotal)}
-            </span>
+            <span className="font-display text-3xl text-primary">{formatPrice(subtotal)}</span>
           </div>
-          <p className="mt-2 text-xs text-muted-foreground">
-            Delivery calculated at checkout.
-          </p>
+          <p className="mt-2 text-xs text-muted-foreground">Delivery calculated at checkout.</p>
 
-          <label
-            htmlFor="gift-note"
-            className="eyebrow mt-8 block"
-          >
+          <label htmlFor="gift-note" className="eyebrow mt-8 block">
             Handwritten note
           </label>
           <textarea
