@@ -101,16 +101,14 @@ function Home() {
 
           <div className="mt-14 grid gap-px overflow-hidden rounded-sm border border-border/60 bg-border/60 lg:grid-cols-3">
             {businessArms.map((arm, i) => (
-              <Reveal key={arm.slug} delay={i * 90} className={`${arm.softBg} p-9`}>
+              <Reveal key={arm.slug} delay={i * 90} className={`${arm.softBg} p-9 text-ink`}>
                 <div className={`h-1 w-12 rounded-full ${arm.accentText} bg-current`} />
                 <p className={`eyebrow mt-7 ${arm.accentText}`}>
                   0{i + 1} — {arm.shortName}
                 </p>
                 <h3 className="mt-3 font-display text-3xl">{arm.name}</h3>
-                <p className="mt-2 font-display text-xl italic text-foreground/70">{arm.tagline}</p>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                  {arm.description}
-                </p>
+                <p className="mt-2 font-display text-xl italic text-ink/70">{arm.tagline}</p>
+                <p className="mt-4 text-sm leading-relaxed text-ink/70">{arm.description}</p>
               </Reveal>
             ))}
           </div>

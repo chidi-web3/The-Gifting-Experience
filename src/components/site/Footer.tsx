@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/de-fi-logo.jpg.asset.json";
+import logo from "@/assets/defi-logo.png";
 import { group } from "@/data/group";
 
 export function Footer() {
@@ -8,7 +8,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <img
-            src={logo.url}
+            src={logo}
             alt={group.name}
             width={64}
             height={64}

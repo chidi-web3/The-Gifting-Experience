@@ -78,13 +78,14 @@
 }
 
 :root {
+  color-scheme: dark;
   --radius: 0.25rem;
 
-  /* group neutrals — warm white base, deep brown/charcoal ink */
+  /* group neutrals — deep purple ground, ivory type */
   --ink: oklch(0.24 0.02 55);
-  --ivory: oklch(0.975 0.007 85);
-  --bronze: oklch(0.58 0.1 72);
-  --bronze-deep: oklch(0.45 0.09 68);
+  --ivory: oklch(0.965 0.01 85);
+  --bronze: oklch(0.78 0.11 80);
+  --bronze-deep: oklch(0.68 0.11 78);
 
   /* arm — gifting solutions (purple + yellow) */
   --gifting: oklch(0.44 0.15 297);
@@ -99,25 +100,25 @@
   --exp: oklch(0.44 0.07 135);
   --exp-soft: oklch(0.95 0.025 130);
 
-  --background: var(--ivory);
-  --foreground: oklch(0.26 0.02 55);
-  --card: oklch(0.995 0.003 85);
-  --card-foreground: oklch(0.26 0.02 55);
-  --popover: oklch(0.99 0.004 85);
-  --popover-foreground: oklch(0.26 0.02 55);
-  --primary: oklch(0.27 0.03 55);
-  --primary-foreground: oklch(0.98 0.008 85);
-  --secondary: oklch(0.93 0.012 75);
-  --secondary-foreground: oklch(0.3 0.03 55);
-  --muted: oklch(0.94 0.01 80);
-  --muted-foreground: oklch(0.48 0.02 60);
-  --accent: oklch(0.93 0.015 78);
-  --accent-foreground: oklch(0.3 0.03 55);
-  --destructive: oklch(0.58 0.21 22);
-  --destructive-foreground: oklch(0.99 0.005 85);
-  --border: oklch(0.4 0.03 55 / 14%);
-  --input: oklch(0.4 0.03 55 / 20%);
-  --ring: oklch(0.45 0.09 68 / 45%);
+  --background: oklch(0.235 0.075 296);
+  --foreground: var(--ivory);
+  --card: oklch(0.275 0.08 296);
+  --card-foreground: var(--ivory);
+  --popover: oklch(0.265 0.078 296);
+  --popover-foreground: var(--ivory);
+  --primary: oklch(0.84 0.14 88);
+  --primary-foreground: oklch(0.23 0.08 296);
+  --secondary: oklch(0.32 0.09 297);
+  --secondary-foreground: var(--ivory);
+  --muted: oklch(0.31 0.085 297);
+  --muted-foreground: oklch(0.8 0.04 300);
+  --accent: oklch(0.33 0.09 297);
+  --accent-foreground: var(--ivory);
+  --destructive: oklch(0.65 0.2 22);
+  --destructive-foreground: oklch(0.98 0.01 85);
+  --border: oklch(0.97 0.01 85 / 16%);
+  --input: oklch(0.97 0.01 85 / 22%);
+  --ring: oklch(0.84 0.14 88 / 50%);
 
   --chart-1: var(--gifting);
   --chart-2: var(--taste);
@@ -125,22 +126,22 @@
   --chart-4: var(--gifting-gold);
   --chart-5: var(--bronze);
 
-  --sidebar: oklch(0.96 0.008 82);
-  --sidebar-foreground: oklch(0.26 0.02 55);
-  --sidebar-primary: oklch(0.27 0.03 55);
-  --sidebar-primary-foreground: oklch(0.98 0.008 85);
-  --sidebar-accent: oklch(0.93 0.012 75);
-  --sidebar-accent-foreground: oklch(0.3 0.03 55);
-  --sidebar-border: oklch(0.4 0.03 55 / 14%);
-  --sidebar-ring: oklch(0.45 0.09 68 / 45%);
+  --sidebar: oklch(0.26 0.08 296);
+  --sidebar-foreground: var(--ivory);
+  --sidebar-primary: oklch(0.84 0.14 88);
+  --sidebar-primary-foreground: oklch(0.23 0.08 296);
+  --sidebar-accent: oklch(0.32 0.09 297);
+  --sidebar-accent-foreground: var(--ivory);
+  --sidebar-border: oklch(0.97 0.01 85 / 16%);
+  --sidebar-ring: oklch(0.84 0.14 88 / 50%);
 
-  /* metallic bronze for display accents on light ground */
+  /* metallic gold for display accents on purple ground */
   --gradient-bronze: linear-gradient(
     100deg,
-    oklch(0.52 0.1 68),
-    oklch(0.72 0.11 82),
-    oklch(0.56 0.1 74),
-    oklch(0.66 0.09 80)
+    oklch(0.78 0.12 82),
+    oklch(0.92 0.09 95),
+    oklch(0.8 0.13 86),
+    oklch(0.88 0.08 90)
   );
   --gradient-veil: linear-gradient(
     180deg,
@@ -148,7 +149,7 @@
     oklch(0.2 0.03 55 / 0.35) 55%,
     oklch(0.18 0.03 55 / 0.8)
   );
-  --shadow-lift: 0 24px 50px -28px oklch(0.3 0.04 55 / 0.35);
+  --shadow-lift: 0 24px 50px -28px oklch(0.12 0.06 290 / 0.65);
 }
 
 .dark {
@@ -191,14 +192,19 @@
 @utility rule-gold {
   height: 1px;
   width: 100%;
-  background-image: linear-gradient(90deg, transparent, oklch(0.45 0.09 68 / 0.4), transparent);
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    oklch(0.84 0.14 88 / 0.45),
+    transparent
+  );
 }
 
 @utility eyebrow {
   font-size: 0.6875rem;
   letter-spacing: 0.34em;
   text-transform: uppercase;
-  color: var(--bronze-deep);
+  color: var(--gifting-gold);
 }
 
 @utility veil {

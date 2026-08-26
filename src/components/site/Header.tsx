@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, ShoppingBag, X } from "lucide-react";
-import logo from "@/assets/de-fi-logo.jpg.asset.json";
+import logo from "@/assets/defi-logo.png";
 import { useCart } from "@/lib/cart";
 
 const nav = [
@@ -26,7 +26,7 @@ export function Header() {
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-5 sm:px-8">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <img
-            src={logo.url}
+            src={logo}
             alt="DEFI GROUP"
             width={44}
             height={44}

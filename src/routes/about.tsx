@@ -93,17 +93,17 @@ function AboutPage() {
               celebrate, eat and gather, and how the world gifts African-made quality.
             </p>
           </Reveal>
-          <Reveal delay={100} className="bg-gifting-soft p-10 sm:p-14">
+          <Reveal delay={100} className="bg-gifting-soft p-10 text-ink sm:p-14">
             <p className="eyebrow text-gifting">From the founder</p>
-            <blockquote className="mt-4 font-display text-2xl italic leading-snug text-foreground/90 sm:text-[1.7rem]">
+            <blockquote className="mt-4 font-display text-2xl italic leading-snug text-ink/90 sm:text-[1.7rem]">
               "I didn't start DEFI to sell things. I started it because how we give, eat and
               celebrate says everything about how much we value each other — and I believed that
               could be done better here."
             </blockquote>
-            <p className="mt-6 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            <p className="mt-6 text-xs uppercase tracking-[0.2em] text-ink/60">
               Founder, DEFI GROUP
             </p>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-4 text-sm leading-relaxed text-ink/70">
               What began as one studio has become a growing group — still founder-led, still
               hands-on, now building beyond gifting into food and experiences.
             </p>
