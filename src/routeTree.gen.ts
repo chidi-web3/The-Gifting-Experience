@@ -16,6 +16,8 @@ import { Route as BusinessesRouteImport } from './routes/businesses'
 import { Route as CartRouteImport } from './routes/cart'
 import { Route as CheckoutRouteImport } from './routes/checkout'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as EnquireEpicTasteRouteImport } from './routes/enquire-epic-taste'
+import { Route as EnquireExperiencesRouteImport } from './routes/enquire-experiences'
 import { Route as PartnershipsRouteImport } from './routes/partnerships'
 import { Route as CollectionsIndexRouteImport } from './routes/collections.index'
 import { Route as CollectionsSlugRouteImport } from './routes/collections.$slug'
@@ -56,6 +58,16 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EnquireEpicTasteRoute = EnquireEpicTasteRouteImport.update({
+  id: '/enquire-epic-taste',
+  path: '/enquire-epic-taste',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EnquireExperiencesRoute = EnquireExperiencesRouteImport.update({
+  id: '/enquire-experiences',
+  path: '/enquire-experiences',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PartnershipsRoute = PartnershipsRouteImport.update({
   id: '/partnerships',
   path: '/partnerships',
@@ -85,6 +97,8 @@ export interface FileRoutesByFullPath {
   '/cart': typeof CartRoute
   '/checkout': typeof CheckoutRoute
   '/contact': typeof ContactRoute
+  '/enquire-epic-taste': typeof EnquireEpicTasteRoute
+  '/enquire-experiences': typeof EnquireExperiencesRoute
   '/partnerships': typeof PartnershipsRoute
   '/collections/$slug': typeof CollectionsSlugRoute
   '/product/$slug': typeof ProductSlugRoute
@@ -98,6 +112,8 @@ export interface FileRoutesByTo {
   '/cart': typeof CartRoute
   '/checkout': typeof CheckoutRoute
   '/contact': typeof ContactRoute
+  '/enquire-epic-taste': typeof EnquireEpicTasteRoute
+  '/enquire-experiences': typeof EnquireExperiencesRoute
   '/partnerships': typeof PartnershipsRoute
   '/collections/$slug': typeof CollectionsSlugRoute
   '/product/$slug': typeof ProductSlugRoute
@@ -112,6 +128,8 @@ export interface FileRoutesById {
   '/cart': typeof CartRoute
   '/checkout': typeof CheckoutRoute
   '/contact': typeof ContactRoute
+  '/enquire-epic-taste': typeof EnquireEpicTasteRoute
+  '/enquire-experiences': typeof EnquireExperiencesRoute
   '/partnerships': typeof PartnershipsRoute
   '/collections/$slug': typeof CollectionsSlugRoute
   '/product/$slug': typeof ProductSlugRoute
@@ -127,6 +145,8 @@ export interface FileRouteTypes {
     | '/cart'
     | '/checkout'
     | '/contact'
+    | '/enquire-epic-taste'
+    | '/enquire-experiences'
     | '/partnerships'
     | '/collections/$slug'
     | '/product/$slug'
@@ -140,6 +160,8 @@ export interface FileRouteTypes {
     | '/cart'
     | '/checkout'
     | '/contact'
+    | '/enquire-epic-taste'
+    | '/enquire-experiences'
     | '/partnerships'
     | '/collections/$slug'
     | '/product/$slug'
@@ -153,6 +175,8 @@ export interface FileRouteTypes {
     | '/cart'
     | '/checkout'
     | '/contact'
+    | '/enquire-epic-taste'
+    | '/enquire-experiences'
     | '/partnerships'
     | '/collections/$slug'
     | '/product/$slug'
@@ -167,6 +191,8 @@ export interface RootRouteChildren {
   CartRoute: typeof CartRoute
   CheckoutRoute: typeof CheckoutRoute
   ContactRoute: typeof ContactRoute
+  EnquireEpicTasteRoute: typeof EnquireEpicTasteRoute
+  EnquireExperiencesRoute: typeof EnquireExperiencesRoute
   PartnershipsRoute: typeof PartnershipsRoute
   CollectionsSlugRoute: typeof CollectionsSlugRoute
   ProductSlugRoute: typeof ProductSlugRoute
@@ -224,6 +250,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/enquire-epic-taste': {
+      id: '/enquire-epic-taste'
+      path: '/enquire-epic-taste'
+      fullPath: '/enquire-epic-taste'
+      preLoaderRoute: typeof EnquireEpicTasteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/enquire-experiences': {
+      id: '/enquire-experiences'
+      path: '/enquire-experiences'
+      fullPath: '/enquire-experiences'
+      preLoaderRoute: typeof EnquireExperiencesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/partnerships': {
       id: '/partnerships'
       path: '/partnerships'
@@ -263,6 +303,8 @@ const rootRouteChildren: RootRouteChildren = {
   CartRoute: CartRoute,
   CheckoutRoute: CheckoutRoute,
   ContactRoute: ContactRoute,
+  EnquireEpicTasteRoute: EnquireEpicTasteRoute,
+  EnquireExperiencesRoute: EnquireExperiencesRoute,
   PartnershipsRoute: PartnershipsRoute,
   CollectionsSlugRoute: CollectionsSlugRoute,
   ProductSlugRoute: ProductSlugRoute,

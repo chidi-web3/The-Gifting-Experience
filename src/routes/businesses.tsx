@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroHamper from "@/assets/hero-hamper.jpg";
-import chocolate from "@/assets/gift-chocolate.jpg";
-import craft from "@/assets/craft-wrapping.jpg";
+import epicTasteFood from "@/assets/gift-epic-taste-food.jpg";
+import experience from "@/assets/defi-experience.jpg";
 import { businessArms, type ArmSlug } from "@/data/group";
 import { Container, PageHeader } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
@@ -49,16 +49,28 @@ const armVisuals: Record<
     },
   },
   "epic-taste": {
-    image: chocolate,
-    alt: "Rich chocolate from Epic Taste",
+    image: epicTasteFood,
+    alt: "Signature plates from Epic Taste Catering",
     panelBg: "bg-taste-soft",
     rule: "border-taste/50",
+    cta: {
+      to: "/enquire-epic-taste",
+      label: "Enquire About Epic Taste",
+      className:
+        "inline-flex items-center rounded-sm bg-taste px-7 py-3.5 text-[0.7rem] uppercase tracking-[0.2em] text-white transition-opacity hover:opacity-90",
+    },
   },
   experiences: {
-    image: craft,
-    alt: "Hands preparing an experience",
+    image: experience,
+    alt: "A DEFI Experiences moment",
     panelBg: "bg-exp-soft",
     rule: "border-exp/50",
+    cta: {
+      to: "/enquire-experiences",
+      label: "Enquire About DEFI Experiences",
+      className:
+        "inline-flex items-center rounded-sm bg-exp px-7 py-3.5 text-[0.7rem] uppercase tracking-[0.2em] text-white transition-opacity hover:opacity-90",
+    },
   },
 };
 

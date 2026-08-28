@@ -10,12 +10,13 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "DEFI GROUP is a parent company building a portfolio of businesses and brands — gifting, food and experiences — for the long term.",
+          "DEFI Group is an original born collective of brands built around one idea: intention — DEFI Gifting Solutions, Epic Taste Catering and DEFI Experiences.",
       },
       { property: "og:title", content: "About DEFI GROUP" },
       {
         property: "og:description",
-        content: "Who we are, what we believe, and where DEFI GROUP is going.",
+        content:
+          "Who we are, our vision, what we believe — and a note from our founder.",
       },
     ],
   }),
@@ -24,21 +25,24 @@ export const Route = createFileRoute("/about")({
 
 const beliefs = [
   [
-    "Built to last",
-    "We make decisions for the decade, not the quarter. Brands that compound quietly beat brands that spike and fade.",
+    "Details carry meaning",
+    "The right gift, meal, or experience says what words often can't.",
   ],
   [
-    "Quality is the strategy",
-    "Every arm of the group competes on the same thing: being genuinely better than people expected. There is no discount version of that.",
+    "Relationships outlast transactions",
+    "We build for the long term, not the one-off.",
   ],
   [
-    "African by design",
-    "We build from Nigeria outward — our taste, our standards, our relationships. Global in ambition without apologising for where we're from.",
+    "Every brand under DEFI is ours",
+    "It is original, warm, and unmistakably intentional.",
   ],
-  [
-    "Partnership over transactions",
-    "The best work we've done started as a conversation, not an order form. We grow when the people around us grow.",
-  ],
+] as const;
+
+const founderNote = [
+  "DEFI Group didn't start as a business plan. It started with a moment in my own life when things were hard — genuinely hard — and what pulled me through wasn't grand gestures. It was intentionality. Someone paid attention. Someone saw what I didn't say out loud and showed up for it anyway.",
+  "That stayed with me.",
+  "I started DEFI because I wanted to give other people that same feeling — to be seen, without having to ask. Whether it's a gift, a meal, or an experience we curate, the goal has never just been to deliver something beautiful. It's to make someone feel like they matter, the way I was made to feel like I mattered when I needed it most.",
+  "That's why \"intentional\" isn't a brand word for us. It's personal. It's where everything from DEFI Gifting Solutions, Epic Taste Catering to DEFI Experiences actually comes from.",
 ] as const;
 
 function AboutPage() {
@@ -47,10 +51,11 @@ function AboutPage() {
       <PageHeader
         eyebrow="About DEFI"
         title="A parent company built on intention."
-        intro="DEFI GROUP creates products and experiences that make people feel seen, valued and remembered — one business at a time."
+        intro="DEFI Group creates products and experiences that make people feel seen, valued and remembered — one business at a time."
       />
 
       <Container className="py-16">
+        {/* Who we are */}
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <Reveal>
             <img
@@ -64,59 +69,66 @@ function AboutPage() {
           <Reveal delay={120}>
             <p className="eyebrow">Who we are</p>
             <h2 className="mt-4 font-display text-4xl leading-tight sm:text-5xl">
-              A group, not a shop.
+              A group solving three problems with one solution.
             </h2>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-              DEFI GROUP is the parent company behind DEFI Gifting Solutions, Epic Taste and DEFI
-              Experiences. We identify categories where care is undervalued — gifting, food, shared
-              experiences — and build businesses that raise the standard.
+              DEFI Group is an original born collective of brands built around one idea: intention.
+              What started in 2019 has grown into three businesses — DEFI Gifting Solutions, Epic
+              Taste Catering, and DEFI Experiences. Each solving a different part of how people
+              connect, celebrate, and show up for each other.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              Each business runs with its own identity and its own customers. Behind them sits one
-              operating philosophy: intentional choices, curated quality, human warmth. That's what
-              makes the whole greater than the portfolio.
+              We're not three businesses. We're a group solving three problems with one solution.
             </p>
           </Reveal>
         </div>
 
-        {/* Vision + founder */}
+        {/* Vision + Founder's note */}
         <div className="mt-24 grid gap-px overflow-hidden rounded-sm border border-border/60 bg-border/60 md:grid-cols-2">
           <Reveal className="bg-card p-10 sm:p-14">
             <p className="eyebrow">Our vision</p>
             <h3 className="mt-4 font-display text-3xl leading-snug sm:text-4xl">
-              A family of African brands the world trusts.
+              A memorable feeling, traced only to our brand.
             </h3>
             <p className="mt-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
-              We are building institutions — companies with their own names, their own reputations
-              and their own futures — under a group that gives them patience, standards and shared
-              strength. In ten years, we intend for DEFI businesses to be part of how Nigerians
-              celebrate, eat and gather, and how the world gifts African-made quality.
+              To give a memorable feeling that can be traced only to our brand. To become the name
+              people trust when a moment matters — whether that's a corporate gift that says more
+              than words could, a table set for an unforgettable event, or an experience someone
+              will talk about for years.
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+              We're building toward a future where DEFI Group is synonymous with intentional living
+              and giving across Africa and beyond.
             </p>
           </Reveal>
           <Reveal delay={100} className="bg-gifting-soft p-10 text-ink sm:p-14">
-            <p className="eyebrow text-gifting">From the founder</p>
-            <blockquote className="mt-4 font-display text-2xl italic leading-snug text-ink/90 sm:text-[1.7rem]">
-              "I didn't start DEFI to sell things. I started it because how we give, eat and
-              celebrate says everything about how much we value each other — and I believed that
-              could be done better here."
+            <p className="eyebrow text-gifting">From the Founder's Note</p>
+            <blockquote className="mt-4 space-y-4">
+              {founderNote.map((paragraph) => (
+                <p
+                  key={paragraph}
+                  className="font-display text-lg italic leading-snug text-ink/90 sm:text-xl"
+                >
+                  {paragraph}
+                </p>
+              ))}
             </blockquote>
             <p className="mt-6 text-xs uppercase tracking-[0.2em] text-ink/60">
-              Founder, DEFI GROUP
-            </p>
-            <p className="mt-4 text-sm leading-relaxed text-ink/70">
-              What began as one studio has become a growing group — still founder-led, still
-              hands-on, now building beyond gifting into food and experiences.
+              Deborah · Founder, DEFI Group
             </p>
           </Reveal>
         </div>
 
-        {/* Beliefs */}
+        {/* What we believe */}
         <div className="mt-24">
           <Reveal>
             <p className="eyebrow">What we believe</p>
             <h3 className="mt-4 max-w-xl font-display text-4xl leading-tight sm:text-5xl">
-              Principles that outlast trends.
+              The most intentional brand you'll come across.
             </h3>
+            <p className="mt-5 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+              We listen to what's not said and see what's not shown. We believe:
+            </p>
           </Reveal>
           <div className="mt-12 grid gap-x-10 gap-y-12 sm:grid-cols-2">
             {beliefs.map(([title, body], i) => (

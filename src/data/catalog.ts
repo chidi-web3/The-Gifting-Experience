@@ -7,6 +7,10 @@ import souvenir from "@/assets/gift-souvenir.jpg";
 import chocolate from "@/assets/gift-chocolate.jpg";
 import fragrance from "@/assets/gift-fragrance.jpg";
 import hero from "@/assets/hero-hamper.jpg";
+import yearEndBasket from "@/assets/gift-year-end-basket.jpg";
+import corporateFolio from "@/assets/gift-coorporate7.jpg";
+import corporateDuo from "@/assets/gift-coorporate6.jpg";
+import corporateTruffle from "@/assets/gift-coorporate4.jpg";
 
 export type CollectionSlug = "weddings" | "corporate" | "birthdays" | "festive" | "thank-you";
 
@@ -140,7 +144,7 @@ export const products: Product[] = [
       "Velvet-lined presentation box",
       "Optional debossed logo",
     ],
-    image: corporate,
+    image: corporateFolio,
     featured: true,
   },
   {
@@ -190,7 +194,7 @@ export const products: Product[] = [
       "Silk-lined gold case",
       "Ribbon and tag",
     ],
-    image: chocolate,
+    image: corporateTruffle,
   },
   {
     slug: "year-end-basket",
@@ -207,7 +211,7 @@ export const products: Product[] = [
       "Preserve and biscuits",
       "Woven keepsake basket",
     ],
-    image: festive,
+    image: yearEndBasket,
   },
   {
     slug: "amber-hour-set",
@@ -241,7 +245,7 @@ export const products: Product[] = [
     description:
       "When a note isn't quite enough. Truffles and a candle boxed together, ribboned in gold, with space for a handwritten card.",
     contents: ["6 artisan truffles", "Travel-size candle", "Handwritten card", "Purple gift box"],
-    image: chocolate,
+    image: corporateDuo,
   },
   {
     slug: "keepsake-mug-set",

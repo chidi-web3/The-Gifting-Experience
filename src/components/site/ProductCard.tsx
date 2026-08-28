@@ -6,7 +6,7 @@ export function ProductCard({ product, delay = 0 }: { product: Product; delay?: 
   return (
     <Reveal as="article" delay={delay} className="group">
       <Link to="/product/$slug" params={{ slug: product.slug }} className="block">
-        <div className="relative overflow-hidden rounded-sm border border-border/70 bg-card">
+        <div className="relative overflow-hidden rounded-sm bg-card">
           <img
             src={product.image}
             alt={product.name}

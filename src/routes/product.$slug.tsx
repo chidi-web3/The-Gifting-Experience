@@ -78,7 +78,7 @@ function ProductPage() {
               alt={product.name}
               width={1000}
               height={1200}
-              className="w-full rounded-sm border border-border/70 object-cover"
+              className="w-full rounded-sm object-cover"
             />
           </Reveal>
 

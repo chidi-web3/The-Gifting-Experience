@@ -1,8 +1,7 @@
-import { useState } from "react";
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { toast } from "sonner";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { formatPrice, getProduct } from "@/data/catalog";
 import { useCart } from "@/lib/cart";
+import { group } from "@/data/group";
 import { Container, PageHeader } from "@/components/site/Section";
 
 export const Route = createFileRoute("/checkout")({
@@ -31,32 +30,21 @@ const fields = [
   { id: "recipient", label: "Recipient name", type: "text", autoComplete: "off" },
 ] as const;
 
+function waNumber(phone: string): string {
+  const digits = phone.replace(/\D/g, "");
+  return digits.startsWith("0") ? `234${digits.slice(1)}` : digits;
+}
+
+const wrapLabels: Record<string, string> = {
+  "house-purple": "House purple + gold satin",
+  ivory: "Ivory + champagne ribbon",
+  kraft: "Kraft + raw silk cord",
+};
+
 function CheckoutPage() {
-  const { lines, subtotal, giftNote, clear } = useCart();
-  const navigate = useNavigate();
-  const [placed, setPlaced] = useState(false);
+  const { lines, subtotal, giftNote } = useCart();
 
   const delivery = lines.length > 0 ? 7500 : 0;
-
-  if (placed) {
-    return (
-      <>
-        <PageHeader eyebrow="Order received" title="It's in the studio now." />
-        <Container className="py-20">
-          <p className="max-w-lg text-sm leading-relaxed text-muted-foreground">
-            Thank you. We'll confirm your order by email within a few hours and share a photograph
-            of the finished box before it leaves us.
-          </p>
-          <Link
-            to="/"
-            className="mt-8 inline-block rounded-sm bg-primary px-7 py-3.5 text-[0.72rem] uppercase tracking-[0.22em] text-primary-foreground"
-          >
-            Back to the studio
-          </Link>
-        </Container>
-      </>
-    );
-  }
 
   if (lines.length === 0) {
     return (
@@ -82,10 +70,49 @@ function CheckoutPage() {
           className="space-y-6"
           onSubmit={(e) => {
             e.preventDefault();
-            clear();
-            setPlaced(true);
-            toast.success("Order received — we'll be in touch shortly");
-            navigate({ to: "/checkout" });
+            const data = new FormData(e.currentTarget);
+            const linesText = lines
+              .map((line) => {
+                const product = getProduct(line.slug);
+                if (!product) return "";
+                const wrapLabel = line.wrap ? wrapLabels[line.wrap] : undefined;
+                return `• ${product.name} × ${line.qty} — ${formatPrice(product.price * line.qty)}${
+                  wrapLabel ? ` (${wrapLabel})` : ""
+                }`;
+              })
+              .filter(Boolean)
+              .join("\n");
+            const detailsText = [
+              `Name: ${data.get("name")}`,
+              `Email: ${data.get("email")}`,
+              `Phone: ${data.get("phone")}`,
+              `Recipient: ${data.get("recipient")}`,
+              `Delivery address: ${data.get("address")}`,
+              `Preferred date: ${data.get("date") || "Not specified"}`,
+            ].join("\n");
+            const message = [
+              `Hello DEFI GROUP!`,
+              `Welcome to DEFI Group — we're glad you're here.`,
+              `What can we do for you today?`,
+              ``,
+              `I've just selected the following on the site and would like to confirm this order:`,
+              ``,
+              linesText,
+              ``,
+              `Subtotal: ${formatPrice(subtotal)}`,
+              `Delivery: ${formatPrice(delivery)}`,
+              `Total: ${formatPrice(subtotal + delivery)}`,
+              giftNote ? `Gift note: "${giftNote}"` : "",
+              ``,
+              `Order details:`,
+              detailsText,
+              ``,
+              `Can we go ahead with this order?`,
+            ]
+              .filter(Boolean)
+              .join("\n");
+            const waLink = `https://wa.me/${waNumber(group.phone)}?text=${encodeURIComponent(message)}`;
+            window.open(waLink, "_blank", "noopener,noreferrer");
           }}
         >
           <div className="grid gap-6 sm:grid-cols-2">

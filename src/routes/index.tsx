@@ -45,12 +45,17 @@ function Home() {
                 Making Impact.
               </h1>
             </Reveal>
-            <Reveal delay={200}>
-              <p className="mt-8 max-w-lg text-base leading-relaxed text-muted-foreground">
-                DEFI GROUP builds businesses and experiences designed to create value and meaningful
-                connections — a growing portfolio of brands in gifting, food and lifestyle, built
-                for the long term.
-              </p>
+<Reveal delay={200}>
+              <div className="mt-8 max-w-lg">
+                <p className="font-display text-3xl italic leading-tight text-foreground/95">
+                  Gifted. Served. Curated.
+                  <span className="bronze-text"> With Intention.</span>
+                </p>
+                <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                  We're the most intentional brand you'll come across. We listen to what's not
+                  said and see what's not shown.
+                </p>
+              </div>
             </Reveal>
             <Reveal delay={300}>
               <div className="mt-10 flex flex-wrap gap-4">
@@ -92,10 +97,9 @@ function Home() {
         <Container>
           <Reveal className="max-w-2xl">
             <p className="eyebrow">Our Ecosystem</p>
-            <h2 className="mt-4 font-display text-4xl sm:text-5xl">One group. Three businesses.</h2>
+            <h2 className="mt-4 font-display text-4xl sm:text-5xl">One group. Three arms.</h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              Each arm runs on its own ambition and audience — connected by one standard of quality
-              and one way of treating people.
+              Gifting, food, experience — different ways of saying the same thing: you're seen.
             </p>
           </Reveal>
 

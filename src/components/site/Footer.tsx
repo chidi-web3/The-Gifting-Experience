@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/defi-logo.png";
+import logo from "@/assets/defi-logo.jpg";
 import { group } from "@/data/group";
 
 export function Footer() {
@@ -42,7 +42,7 @@ export function Footer() {
                 hash="epic-taste"
                 className="text-sm text-muted-foreground transition-colors hover:text-taste"
               >
-                Epic Taste
+                Epic Taste Catering
               </Link>
             </li>
             <li>

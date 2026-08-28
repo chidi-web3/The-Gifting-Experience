@@ -33,7 +33,7 @@ export const businessArms: BusinessArm[] = [
   },
   {
     slug: "epic-taste",
-    name: "Epic Taste",
+    name: "Epic Taste Catering",
     shortName: "Epic Taste",
     tagline: "Everyday food, done properly",
     description:
@@ -54,12 +54,12 @@ export const businessArms: BusinessArm[] = [
     shortName: "Experiences",
     tagline: "Moments designed to be remembered",
     description:
-      "Events, experiences and lifestyle solutions — curated gatherings and immersive moments that connect people to culture, place and each other.",
+      "Events, Tours and Adventures, curated to leave unforgettable memories and create moments.",
     offerings: [
       "Curated events & activations",
       "Group experiences & retreats",
       "Lifestyle programming",
-      "Cultural partnerships",
+      "Culture & adventure tours",
     ],
     accentText: "text-exp",
     accentBorder: "border-exp/40",
@@ -111,7 +111,8 @@ export const partnershipPathways: PartnershipPathway[] = [
 export const group = {
   name: "DEFI GROUP",
   promise: "Building Brands. Creating Experiences. Making Impact.",
-  email: "hello@defigroup.africa",
-  phone: "+234 800 000 0000",
-  location: "Lagos, Nigeria",
+  email: "hellodefigroup@gmail.com",
+  phone: "08063938828",
+  location: "Ogba, Lagos, Nigeria",
+  hours: "Mon–Sat, 9am – 6pm",
 } as const;

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, ShoppingBag, X } from "lucide-react";
-import logo from "@/assets/defi-logo.png";
+import logo from "@/assets/defi-logo.jpg";
 import { useCart } from "@/lib/cart";
 
 const nav = [

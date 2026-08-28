@@ -27,8 +27,8 @@ export const Route = createFileRoute("/contact")({
 const details = [
   { Icon: Mail, label: "Email", value: group.email },
   { Icon: Phone, label: "Phone & WhatsApp", value: group.phone },
-  { Icon: MapPin, label: "Head office", value: `${group.location} — by appointment` },
-  { Icon: Clock, label: "Hours", value: "Mon–Sat, 9am – 6pm" },
+  { Icon: MapPin, label: "Head Office", value: `${group.location} — online appointment` },
+  { Icon: Clock, label: "Hours", value: group.hours },
 ];
 
 const enquiryOptions = [
