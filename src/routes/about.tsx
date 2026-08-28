@@ -15,8 +15,7 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "About DEFI GROUP" },
       {
         property: "og:description",
-        content:
-          "Who we are, our vision, what we believe — and a note from our founder.",
+        content: "Who we are, our vision, what we believe — and a note from our founder.",
       },
     ],
   }),
@@ -24,18 +23,9 @@ export const Route = createFileRoute("/about")({
 });
 
 const beliefs = [
-  [
-    "Details carry meaning",
-    "The right gift, meal, or experience says what words often can't.",
-  ],
-  [
-    "Relationships outlast transactions",
-    "We build for the long term, not the one-off.",
-  ],
-  [
-    "Every brand under DEFI is ours",
-    "It is original, warm, and unmistakably intentional.",
-  ],
+  ["Details carry meaning", "The right gift, meal, or experience says what words often can't."],
+  ["Relationships outlast transactions", "We build for the long term, not the one-off."],
+  ["Every brand under DEFI is ours", "It is original, warm, and unmistakably intentional."],
 ] as const;
 
 const founderNote = [

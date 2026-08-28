@@ -107,9 +107,7 @@ export function EnquiryForm({ defaultTopic }: { defaultTopic: string }) {
             <Reveal as="li" key={label} delay={i * 70} className="flex gap-4">
               <Icon className="mt-0.5 size-4 shrink-0 text-bronze-deep" aria-hidden />
               <div>
-                <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                  {label}
-                </p>
+                <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">{label}</p>
                 <p className="mt-1 text-sm">{value}</p>
               </div>
             </Reveal>

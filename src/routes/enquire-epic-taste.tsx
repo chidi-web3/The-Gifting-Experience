@@ -24,12 +24,12 @@ const tasteCollections = [
     name: "Corporate Taste",
     blurb:
       "Boardrooms, launches and client tables — refined menus and smart presentation for every business occasion.",
-    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=80",
+    image:
+      "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Native Taste",
-    blurb:
-      "Jollof, egusi, puff-puff and the classics — cooked from memory and served like home.",
+    blurb: "Jollof, egusi, puff-puff and the classics — cooked from memory and served like home.",
     image: epicTasteFood2,
   },
   {

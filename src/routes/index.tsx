@@ -45,15 +45,15 @@ function Home() {
                 Making Impact.
               </h1>
             </Reveal>
-<Reveal delay={200}>
+            <Reveal delay={200}>
               <div className="mt-8 max-w-lg">
                 <p className="font-display text-3xl italic leading-tight text-foreground/95">
                   Gifted. Served. Curated.
                   <span className="bronze-text"> With Intention.</span>
                 </p>
                 <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                  We're the most intentional brand you'll come across. We listen to what's not
-                  said and see what's not shown.
+                  We're the most intentional brand you'll come across. We listen to what's not said
+                  and see what's not shown.
                 </p>
               </div>
             </Reveal>
