@@ -133,19 +133,16 @@ function BusinessesPage() {
                 </Reveal>
 
                 <Reveal delay={120} className={flip ? "order-1 lg:order-2" : ""}>
-                  <div className={`relative`}>
-                    <div className={`absolute -inset-4 rounded-sm ${visual.panelBg}`} aria-hidden />
-                    {visual.image && (
-                      <img
-                        src={visual.image}
-                        alt={visual.alt ?? arm.name}
-                        width={1200}
-                        height={912}
-                        loading={i === 0 ? "eager" : "lazy"}
-                        className="lift relative aspect-[4/3] w-full rounded-sm object-cover"
-                      />
-                    )}
-                  </div>
+                  {visual.image && (
+                    <img
+                      src={visual.image}
+                      alt={visual.alt ?? arm.name}
+                      width={1200}
+                      height={912}
+                      loading={i === 0 ? "eager" : "lazy"}
+                      className="lift aspect-[4/3] w-full rounded-sm object-cover"
+                    />
+                  )}
                 </Reveal>
               </div>
             </section>
