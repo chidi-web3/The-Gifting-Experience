@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import hero from "@/assets/hero-hamper.jpg";
-import heroPurpleGold from "@/assets/hero-purple-gold.jpg";
+import heroHome from "@/assets/homepage-image.jpg";
 import craft from "@/assets/craft-wrapping.jpg";
 import { businessArms, partnershipPathways } from "@/data/group";
 import { Container } from "@/components/site/Section";
@@ -74,10 +74,10 @@ function Home() {
           <Reveal delay={150} className="relative">
             <div className="absolute -inset-6 rounded-sm border border-border/60" />
             <img
-              src={heroPurpleGold}
-              alt="A premium purple and gold DEFI Gifting Solutions gift box"
-              width={1400}
-              height={1053}
+              src={heroHome}
+              alt="A premium DEFI Gifting Solutions gift experience"
+              width={1254}
+              height={1254}
               className="lift relative w-full rounded-sm object-cover"
             />
           </Reveal>
