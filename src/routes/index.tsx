@@ -71,14 +71,13 @@ function Home() {
             </Reveal>
           </div>
 
-          <Reveal delay={150} className="relative">
-            <div className="absolute -inset-6 rounded-sm border border-border/60" />
+          <Reveal delay={150}>
             <img
               src={heroHome}
               alt="A premium DEFI Gifting Solutions gift experience"
               width={1254}
               height={1254}
-              className="lift relative w-full rounded-sm object-cover"
+              className="lift w-full rounded-sm object-cover"
             />
           </Reveal>
         </div>
@@ -159,10 +158,6 @@ function Home() {
             </Reveal>
 
             <Reveal delay={120} className="relative">
-              <div
-                className="absolute -bottom-5 -left-5 h-full w-full rounded-sm bg-gifting-soft"
-                aria-hidden
-              />
               <img
                 src={craft}
                 alt="Hands tying a ribbon around a DEFI Gifting Solutions box"
