@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import hero from "@/assets/hero-hamper.jpg";
-import heroBackground from "@/assets/background.jpg";
-import heroGift from "@/assets/unsplash-gift1.jpg";
+import heroPurpleGold from "@/assets/hero-purple-gold.jpg";
 import craft from "@/assets/craft-wrapping.jpg";
 import { businessArms, partnershipPathways } from "@/data/group";
 import { Container } from "@/components/site/Section";
@@ -74,23 +73,13 @@ function Home() {
 
           <Reveal delay={150} className="relative">
             <div className="absolute -inset-6 rounded-sm border border-border/60" />
-            <div className="lift relative aspect-[4/3] w-full overflow-hidden rounded-sm">
-              <img
-                src={heroBackground}
-                alt=""
-                aria-hidden
-                width={4320}
-                height={7680}
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-              <img
-                src={heroGift}
-                alt="A premium purple and gold DEFI Gifting Solutions gift box"
-                width={1731}
-                height={1765}
-                className="absolute inset-0 h-full w-full object-contain p-6 drop-shadow-2xl"
-              />
-            </div>
+            <img
+              src={heroPurpleGold}
+              alt="A premium purple and gold DEFI Gifting Solutions gift box"
+              width={1400}
+              height={1053}
+              className="lift relative w-full rounded-sm object-cover"
+            />
           </Reveal>
         </div>
       </section>
