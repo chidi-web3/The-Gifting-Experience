@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import hero from "@/assets/hero-hamper.jpg";
+import heroPurpleGold from "@/assets/hero-purple-gold.jpg";
 import craft from "@/assets/craft-wrapping.jpg";
 import { businessArms, partnershipPathways } from "@/data/group";
 import { Container } from "@/components/site/Section";
@@ -40,17 +41,12 @@ function Home() {
             </Reveal>
             <Reveal delay={100}>
               <h1 className="mt-6 font-display text-5xl leading-[1.04] sm:text-6xl lg:text-[4.6rem]">
-                Building Brands.
-                <span className="block bronze-text italic">Creating Experiences.</span>
-                Making Impact.
+                Gifted. Served. Curated.
+                <span className="block bronze-text italic">With Intention.</span>
               </h1>
             </Reveal>
             <Reveal delay={200}>
               <div className="mt-8 max-w-lg">
-                <p className="font-display text-3xl italic leading-tight text-foreground/95">
-                  Gifted. Served. Curated.
-                  <span className="bronze-text"> With Intention.</span>
-                </p>
                 <p className="mt-4 text-base leading-relaxed text-muted-foreground">
                   We're the most intentional brand you'll come across. We listen to what's not said
                   and see what's not shown.
@@ -78,10 +74,10 @@ function Home() {
           <Reveal delay={150} className="relative">
             <div className="absolute -inset-6 rounded-sm border border-border/60" />
             <img
-              src={hero}
-              alt="A premium DEFI Gifting Solutions hamper tied by hand"
-              width={1408}
-              height={1200}
+              src={heroPurpleGold}
+              alt="A premium purple and gold DEFI Gifting Solutions gift box"
+              width={1400}
+              height={1053}
               className="lift relative w-full rounded-sm object-cover"
             />
           </Reveal>
