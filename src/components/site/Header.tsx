@@ -34,7 +34,7 @@ export function Header() {
           />
           <span className="hidden flex-col leading-none sm:flex">
             <span className="font-display text-[1.35rem] tracking-wide">DEFI GROUP</span>
-            <span className="eyebrow mt-1 text-[0.45rem]">Brands · Experiences · Impact</span>
+            <span className="eyebrow mt-1 text-[0.45rem]">Food · Gift · Experience</span>
           </span>
         </Link>
 
