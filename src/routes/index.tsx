@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import hero from "@/assets/hero-hamper.jpg";
 import heroBackground from "@/assets/background.jpg";
-import heroGift from "@/assets/unsplash-gift.jpg";
+import heroGift from "@/assets/unsplash-gift1.jpg";
 import craft from "@/assets/craft-wrapping.jpg";
 import { businessArms, partnershipPathways } from "@/data/group";
 import { Container } from "@/components/site/Section";
@@ -86,8 +86,8 @@ function Home() {
               <img
                 src={heroGift}
                 alt="A premium purple and gold DEFI Gifting Solutions gift box"
-                width={5184}
-                height={3456}
+                width={1731}
+                height={1765}
                 className="absolute inset-0 h-full w-full object-contain p-6 drop-shadow-2xl"
               />
             </div>
