@@ -79,7 +79,7 @@ function BusinessesPage() {
     <>
       <PageHeader
         eyebrow="Our Businesses"
-        title="One group. Three ways to matter."
+        title="One Group. Three Arms."
         intro="Each business in the DEFI GROUP portfolio carries its own identity and audience — connected by one standard of quality."
       />
 
