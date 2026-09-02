@@ -89,9 +89,9 @@ export const products: Product[] = [
     name: "Premium Set",
     collection: "festive",
     price: 50000,
-    blurb: "Our fullest box — the one people photograph before they open it.",
+    blurb: "Our signature premium box, wrapped to be opened slowly.",
     description:
-      "The house hamper. A deep purple keepsake box lined with tissue, layered with preserves, tea, biscuits and a hand-poured candle, then closed with a gold satin bow and a calligraphed tag.",
+      "The Signature Premium Set. A deep purple keepsake box lined with tissue, layered with preserves, tea, biscuits and a hand-poured candle, then closed with a gold satin bow and a calligraphed tag.",
     contents: [
       "Hand-poured sandalwood & amber candle",
       "Salted caramel biscuit tin",
@@ -108,15 +108,10 @@ export const products: Product[] = [
     name: "Simple Female Box",
     collection: "weddings",
     price: 33000,
-    blurb: "An ivory keepsake box for the people standing closest to you.",
+    blurb: "A refined little box made for her.",
     description:
-      "Made for bridal parties. A rigid ivory box with a champagne ribbon and dried florals, holding small pieces chosen to be kept long after the day.",
-    contents: [
-      "Ivory rigid keepsake box",
-      "Dried floral sprig",
-      "Silk hair ribbon",
-      "Personalised note card",
-    ],
+      "The Simple Female Box. A neat, elegant keepsake chosen to feel personal — pretty on the outside, considered inside, and easy to keep long after the occasion.",
+    contents: ["Keepsake gift", "Silk ribbon", "Personalised note card"],
     image: simpleFemaleBox,
     featured: true,
   },
@@ -126,15 +121,10 @@ export const products: Product[] = [
     collection: "weddings",
     price: 1850,
     moq: 20,
-    blurb: "Table souvenirs your guests will actually take home.",
+    blurb: "A keepsake your guests will actually take home.",
     description:
-      "Priced for volume, finished like a single gift. Each souvenir is wrapped, tagged and boxed in trays of twenty for easy table setting.",
-    contents: [
-      "Enamel keyring",
-      "Wrapped confection",
-      "Printed thank-you card",
-      "Purple organza pouch",
-    ],
+      "A compact souvenir for events — wrapped, tagged and ready for the table. Priced for volume and finished like a single considered gift for every guest.",
+    contents: ["Keepsake item", "Wrapped confection", "Printed thank-you card", "Organza pouch"],
     image: souvenir6,
   },
   {
@@ -142,15 +132,10 @@ export const products: Product[] = [
     name: "Corporate boxes",
     collection: "corporate",
     price: 25000,
-    blurb: "A leather folio and pen, presented in a purple velvet tray.",
+    blurb: "Boxed gifts that carry your business name well.",
     description:
-      "For clients and long-serving staff. Full-grain folio and a weighted pen set into a velvet-lined presentation box, with optional blind-debossed branding.",
-    contents: [
-      "Full-grain leather folio",
-      "Weighted matte pen",
-      "Velvet-lined presentation box",
-      "Optional debossed logo",
-    ],
+      "Corporate boxes for clients, staff and partners — smartly presented with room for discreet branding, finished cleanly and ready to hand over in volume.",
+    contents: ["Corporate gift set", "Presentation box", "Discreet branding", "Gift card"],
     image: corporateBoxes,
     featured: true,
   },
@@ -159,15 +144,10 @@ export const products: Product[] = [
     name: "Men's Gift Box (personal)",
     collection: "corporate",
     price: 57750,
-    blurb: "Onboarding gifts that make the first day feel considered.",
+    blurb: "A considered gift box built for him.",
     description:
-      "A compact welcome set built around your palette — mug, tote and keyring, wrapped as one gift rather than handed over as three items.",
-    contents: [
-      "Ceramic mug in brand colour",
-      "Cotton canvas tote",
-      "Enamel keyring",
-      "Welcome card",
-    ],
+      "The Men's Gift Box (personal). A curated set of useful, well-made pieces — practical enough to use every day and polished enough to feel like a proper gift.",
+    contents: ["Curated men's gift set", "Useful everyday piece", "Card and ribbon"],
     image: mensGiftBox2,
   },
   {
@@ -175,15 +155,10 @@ export const products: Product[] = [
     name: "Staff Appreciation Box",
     collection: "birthdays",
     price: 35000,
-    blurb: "Confetti, chocolate and one very good candle.",
+    blurb: "A thank-you your team will remember.",
     description:
-      "Built to be opened slowly. Lift the lid and the tissue parts to reveal a candle, truffles and a folded note in your handwriting.",
-    contents: [
-      "Hand-poured celebration candle",
-      "Assorted truffles",
-      "Confetti tissue layer",
-      "Handwritten note",
-    ],
+      "The Staff Appreciation Box. A warm, well-packed way to say thank you — assembled to feel personal, so your people feel genuinely valued.",
+    contents: ["Appreciation gift", "Handpoured candle", "Personalised note"],
     image: staffAppreciationBox,
     featured: true,
   },
@@ -193,15 +168,10 @@ export const products: Product[] = [
     collection: "birthdays",
     price: 5000,
     moq: 10,
-    blurb: "Twelve gold-dusted truffles on purple silk.",
+    blurb: "Little gifts to pass down the bridal train.",
     description:
-      "A small, serious box of chocolate. Twelve truffles set on silk in a gold-edged case — the gift for when one thing, done properly, is enough.",
-    contents: [
-      "12 artisan truffles",
-      "Gold-dusted finish",
-      "Silk-lined gold case",
-      "Ribbon and tag",
-    ],
+      "Bridal Train Gifts. Small keepsakes chosen for the bride's inner circle — light to carry, easy to hand over, and lovely enough to be kept.",
+    contents: ["Keepsake gift", "Ribbon tie", "Gift tag"],
     image: bridalTrainGifts,
   },
   {
@@ -209,9 +179,9 @@ export const products: Product[] = [
     name: "Year-End Basket",
     collection: "festive",
     price: 115000,
-    blurb: "Wine, preserves and roasted nuts in a hand-tied basket.",
+    blurb: "A generous hamper for the end of the year.",
     description:
-      "The December hamper. A woven basket dressed in purple cellophane and gold ribbon, weighted with things worth sharing at a full table.",
+      "The Year-End Basket. A full, hand-packed hamper for the December season — weighted with wine, treats and good things worth sharing around a full table.",
     contents: [
       "Bottle of red wine",
       "Roasted spiced nuts",
@@ -227,10 +197,10 @@ export const products: Product[] = [
     collection: "weddings",
     price: 2000,
     moq: 12,
-    blurb: "A fragrance and candle pairing for the quiet end of the year.",
+    blurb: "Keepsakes your wedding guests will treasure.",
     description:
-      "Amber, resin and a little smoke. The bottle and the candle share a scent, so the room and the person carry the same trace.",
-    contents: ["50ml eau de parfum", "Gold-lidded scented candle", "Velvet pouch", "Scent card"],
+      "Wedding Souvenirs. Small, wrapped keepsakes for your guests and bridal party — chosen to match the day and taken home with a smile.",
+    contents: ["Keepsake souvenir", "Printed card", "Ribbon tie"],
     image: weddingSouvenirs,
     featured: true,
   },
@@ -240,10 +210,10 @@ export const products: Product[] = [
     collection: "thank-you",
     price: 1500,
     moq: 12,
-    blurb: "One candle, one card, one length of gold twine.",
+    blurb: "A small keepsake to say thank you.",
     description:
-      "The smallest gift we make and one of the most requested. A candle wrapped in purple paper, tied with gold twine and a sprig of dried lavender.",
-    contents: ["Soy candle", "Dried lavender sprig", "Letterpressed card", "Gold twine"],
+      "A compact thank-you souvenir — wrapped and ready to hand out, chosen to feel considered rather than generic for every recipient.",
+    contents: ["Keepsake item", "Printed card", "Ribbon tie"],
     image: souvenirs4,
   },
   {
@@ -251,10 +221,10 @@ export const products: Product[] = [
     name: "Men's Gift Box",
     collection: "thank-you",
     price: 78500,
-    blurb: "Chocolate and candlelight, wrapped as a pair.",
+    blurb: "A premium boxed gift for him.",
     description:
-      "When a note isn't quite enough. Truffles and a candle boxed together, ribboned in gold, with space for a handwritten card.",
-    contents: ["6 artisan truffles", "Travel-size candle", "Handwritten card", "Purple gift box"],
+      "The Men's Gift Box. A fuller, more considered set of men's essentials — premium enough for a milestone, useful enough to keep on the desk or dresser.",
+    contents: ["Curated men's gift set", "Premium finish", "Card and ribbon"],
     image: mensGiftBox,
   },
   {
@@ -263,10 +233,10 @@ export const products: Product[] = [
     collection: "thank-you",
     price: 1800,
     moq: 10,
-    blurb: "A gold-lined mug that outlives the occasion.",
+    blurb: "Simple keepsakes that outlive the occasion.",
     description:
-      "A glazed ceramic mug finished with a gold rim, boxed with a tote and keyring. Simple, useful, and quietly branded if you'd like it to be.",
-    contents: ["Gold-rimmed ceramic mug", "Cotton tote", "Keyring", "Gift box"],
+      "Souvenirs. Small, useful keepsakes for guests and team members — simple, well-made and quiet enough to suit any occasion.",
+    contents: ["Keepsake item", "Gift card", "Ribbon tie"],
     image: souvenirs1,
   },
 ];

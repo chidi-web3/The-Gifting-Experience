@@ -24,18 +24,19 @@ const tasteCollections = [
   {
     name: "Corporate Taste",
     blurb:
-      "Staff breakfast & lunch bulk — refined menus and smart presentation for every business occasion.",
+      "A corporate food tray — staff breakfast & lunch packed in bulk, with smart presentation for the workday.",
     image: epicTasteFoodtray,
   },
   {
     name: "Native Taste",
-    blurb: "Jollof, egusi, puff-puff and the classics — cooked from memory and served like home.",
+    blurb:
+      "A medium basic food tray of homestyle favourites — classic dishes, well portioned and served simply.",
     image: mediumBasicFoodTray,
   },
   {
     name: "Occasional Taste",
     blurb:
-      "Finger food and full menus for birthdays, weddings and parties — food that keeps the room talking.",
+      "Finger food and full platters for birthdays, weddings and parties — food that keeps the room talking.",
     image: epicTasteFood4,
   },
 ];
