@@ -32,8 +32,8 @@ export function Header() {
             height={44}
             className="size-11 rounded-sm object-cover"
           />
-          <span className="hidden flex-col leading-none sm:flex">
-            <span className="font-display text-[1.35rem] tracking-wide">DEFI GROUP</span>
+          <span className="flex flex-col leading-none">
+            <span className="font-display text-[1.35rem] leading-none tracking-wide">DEFI GROUP</span>
             <span className="eyebrow mt-1 text-[0.45rem]">Gift · Food · Experience</span>
           </span>
         </Link>
