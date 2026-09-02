@@ -143,7 +143,7 @@ export const products: Product[] = [
   {
     slug: "candlelight-birthday-box",
     name: "Staff Appreciation Box",
-    collection: "birthdays",
+    collection: "corporate",
     price: 35000,
     blurb: "A thank-you your team will remember.",
     description:
@@ -155,7 +155,7 @@ export const products: Product[] = [
   {
     slug: "midnight-truffle-box",
     name: "Bridal Train Gifts",
-    collection: "birthdays",
+    collection: "souvenirs",
     price: 5000,
     moq: 10,
     blurb: "Little gifts to pass down the bridal train.",

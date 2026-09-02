@@ -12,7 +12,7 @@ export const Route = createFileRoute("/enquire-experiences")({
       {
         name: "description",
         content:
-          "Ask DEFI Experiences about tours, retreats and cultural events — moments from the places we've been and the ones we'll take you next.",
+          "Ask DEFI Experiences about tours, camping, surveys and cultural events — moments from the places we've been and the ones we'll take you next.",
       },
     ],
   }),
@@ -27,11 +27,11 @@ const experienceDestinations = [
     image: experienceTravel,
   },
   {
-    name: "Retreats & Escapes",
+    name: "Camping & Survey",
     blurb:
-      "Quiet getaways and group retreats designed to slow time, reset and leave everyone wiser.",
+      "Outdoor camping trips and guided surveys of the land — tuck in a tent, explore the wilderness and map what we find.",
     image:
-      "https://images.unsplash.com/photo-1768028758084-e6b264ece28b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Events & Culture",

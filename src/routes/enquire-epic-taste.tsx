@@ -23,20 +23,17 @@ export const Route = createFileRoute("/enquire-epic-taste")({
 const tasteCollections = [
   {
     name: "Corporate Taste",
-    blurb:
-      "A corporate food tray — staff breakfast & lunch packed in bulk, with smart presentation for the workday.",
+    blurb: "A corporate food tray for staff breakfast & lunch in bulk.",
     image: epicTasteFoodtray,
   },
   {
     name: "Native Taste",
-    blurb:
-      "A medium basic food tray of homestyle favourites — classic dishes, well portioned and served simply.",
+    blurb: "A medium basic food tray of homestyle classics.",
     image: mediumBasicFoodTray,
   },
   {
     name: "Occasional Taste",
-    blurb:
-      "Finger food and full platters for birthdays, weddings and parties — food that keeps the room talking.",
+    blurb: "Finger food and platters for birthdays, weddings and parties.",
     image: epicTasteFood4,
   },
 ];

@@ -51,6 +51,20 @@ function CollectionsIndex() {
             <ProductCard key={p.slug} product={p} delay={(i % 3) * 80} />
           ))}
         </div>
+
+        <div className="mt-16 text-center">
+          <a
+            href="https://wa.me/c/2348063938828"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded-sm bg-primary px-8 py-4 text-[0.72rem] uppercase tracking-[0.22em] text-primary-foreground transition-opacity hover:opacity-90"
+          >
+            View more items
+          </a>
+          <p className="mt-3 text-xs text-muted-foreground">
+            Follow this link to view our catalog on WhatsApp.
+          </p>
+        </div>
       </Container>
     </>
   );
