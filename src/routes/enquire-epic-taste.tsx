@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import epicTasteFood2 from "@/assets/gift-epic-taste-food2.jpg";
 import epicTasteFood4 from "@/assets/defi-epic-taste-food4.jpg";
+import epicTasteFoodtray from "@/assets/epic-taste-foodtray.jpeg";
 import { Container, PageHeader } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import { EnquiryForm } from "@/components/site/EnquiryForm";
@@ -23,9 +24,8 @@ const tasteCollections = [
   {
     name: "Corporate Taste",
     blurb:
-      "Boardrooms, launches and client tables — refined menus and smart presentation for every business occasion.",
-    image:
-      "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=80",
+      "Staff breakfast & lunch bulk — refined menus and smart presentation for every business occasion.",
+    image: epicTasteFoodtray,
   },
   {
     name: "Native Taste",

@@ -41,7 +41,7 @@ export const businessArms: BusinessArm[] = [
     offerings: [
       "Ready-to-enjoy meals & treats",
       "Catering for gatherings",
-      "Signature bakes & confections",
+      "Staff breakfast & lunch bulk",
       "Seasonal menus",
     ],
     accentText: "text-taste",

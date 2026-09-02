@@ -5,6 +5,13 @@ import craft from "@/assets/craft-wrapping.jpg";
 import { businessArms, partnershipPathways } from "@/data/group";
 import { Container } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -92,24 +99,35 @@ function Home() {
         <Container>
           <Reveal className="max-w-2xl">
             <p className="eyebrow">Our Ecosystem</p>
-            <h2 className="mt-4 font-display text-4xl sm:text-5xl">One group. Three arms.</h2>
+            <h2 className="mt-4 font-display text-4xl sm:text-5xl">One Group. Three Arms.</h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
               Gifting, food, experience — different ways of saying the same thing: you're seen.
             </p>
           </Reveal>
 
-          <div className="mt-14 grid gap-px overflow-hidden rounded-sm border border-border/60 bg-border/60 lg:grid-cols-3">
-            {businessArms.map((arm, i) => (
-              <Reveal key={arm.slug} delay={i * 90} className={`${arm.softBg} p-9 text-ink`}>
-                <div className={`h-1 w-12 rounded-full ${arm.accentText} bg-current`} />
-                <p className={`eyebrow mt-7 ${arm.accentText}`}>
-                  0{i + 1} — {arm.shortName}
-                </p>
-                <h3 className="mt-3 font-display text-3xl">{arm.name}</h3>
-                <p className="mt-2 font-display text-xl italic text-ink/70">{arm.tagline}</p>
-                <p className="mt-4 text-sm leading-relaxed text-ink/70">{arm.description}</p>
-              </Reveal>
-            ))}
+          <div className="mt-14">
+            <Carousel
+              opts={{ align: "start", loop: true }}
+              className="mx-auto w-full max-w-3xl"
+            >
+              <CarouselContent>
+                {businessArms.map((arm, i) => (
+                  <CarouselItem key={arm.slug} className="basis-full">
+                    <Reveal className={`${arm.softBg} p-9 text-ink`}>
+                      <div className={`h-1 w-12 rounded-full ${arm.accentText} bg-current`} />
+                      <p className={`eyebrow mt-7 ${arm.accentText}`}>
+                        0{i + 1} — {arm.shortName}
+                      </p>
+                      <h3 className="mt-3 font-display text-3xl">{arm.name}</h3>
+                      <p className="mt-2 font-display text-xl italic text-ink/70">{arm.tagline}</p>
+                      <p className="mt-4 text-sm leading-relaxed text-ink/70">{arm.description}</p>
+                    </Reveal>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
 
           <Reveal delay={120}>

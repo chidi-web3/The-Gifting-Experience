@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import experienceTravel from "@/assets/defi-experience-travel.jpg";
-import experience2 from "@/assets/defi-experience2.jpg";
+import experienceTravel from "@/assets/defi-experience-travel2.jpeg";
 import experience3 from "@/assets/defi-experience3.jpg";
 import { Container, PageHeader } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
@@ -31,7 +30,8 @@ const experienceDestinations = [
     name: "Retreats & Escapes",
     blurb:
       "Quiet getaways and group retreats designed to slow time, reset and leave everyone wiser.",
-    image: experience2,
+    image:
+      "https://images.unsplash.com/photo-1768028758084-e6b264ece28b?auto=format&fit=crop&w=1200&q=80",
   },
   {
     name: "Events & Culture",
