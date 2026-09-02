@@ -152,10 +152,6 @@
   --shadow-lift: 0 24px 50px -28px oklch(0.12 0.06 290 / 0.65);
 }
 
-.dark {
-  color-scheme: dark;
-}
-
 @layer base {
   * {
     border-color: var(--color-border);
