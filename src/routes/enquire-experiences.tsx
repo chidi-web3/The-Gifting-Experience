@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import experienceTravel from "@/assets/defi-experience-travel2.jpeg";
 import experience3 from "@/assets/defi-experience3.jpg";
+import travelVacation from "@/assets/Travel and vacation.jpeg";
 import { Container, PageHeader } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import { EnquiryForm } from "@/components/site/EnquiryForm";
@@ -12,7 +13,7 @@ export const Route = createFileRoute("/enquire-experiences")({
       {
         name: "description",
         content:
-          "Ask DEFI Experiences about tours, camping, surveys and cultural events — moments from the places we've been and the ones we'll take you next.",
+          "Ask DEFI Experiences about tours, travels, vacations and cultural events — moments from the places we've been and the ones we'll take you next.",
       },
     ],
   }),
@@ -27,11 +28,10 @@ const experienceDestinations = [
     image: experienceTravel,
   },
   {
-    name: "Camping & Survey",
+    name: "Travels and vacations",
     blurb:
-      "Outdoor camping trips and guided surveys of the land — tuck in a tent, explore the wilderness and map what we find.",
-    image:
-      "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1200&q=80",
+      "Curated trips and stays in visited areas and countries — plan your travel or vacation end to end.",
+    image: travelVacation,
   },
   {
     name: "Events & Culture",
