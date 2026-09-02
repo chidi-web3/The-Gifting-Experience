@@ -91,9 +91,7 @@ function CheckoutPage() {
               `Preferred date: ${data.get("date") || "Not specified"}`,
             ].join("\n");
             const message = [
-              `Hello DEFI GROUP!`,
-              `Welcome to DEFI Group — we're glad you're here.`,
-              `What can we do for you today?`,
+              `HELLO DEFI GROUP`,
               ``,
               `I've just selected the following on the site and would like to confirm this order:`,
               ``,
