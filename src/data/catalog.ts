@@ -8,13 +8,13 @@ import premiumSet from "@/assets/Premium Set.jpeg";
 import simpleFemaleBox from "@/assets/Simple Female Box.jpeg";
 import souvenir6 from "@/assets/Souvenir6.jpeg";
 import corporateBoxes from "@/assets/Corporate Boxes.jpeg";
-import mensGiftBox2 from "@/assets/Men's Gift Box2.jpeg";
+import mensGiftBox2 from "@/assets/mens-gift-box2.jpeg";
 import staffAppreciationBox from "@/assets/Staff Appreciation Box.jpeg";
 import bridalTrainGifts from "@/assets/Bridal Train Gifts.jpeg";
 import bevrageHampers from "@/assets/Bevrage Hampers.jpeg";
 import weddingSouvenirs from "@/assets/Wedding Souvenirs.jpeg";
 import souvenirs4 from "@/assets/Souvenirs4.jpeg";
-import mensGiftBox from "@/assets/Men's Gift Box.jpeg";
+import mensGiftBox from "@/assets/mens-gift-box.jpeg";
 import souvenirs1 from "@/assets/Souvenirs1.jpeg";
 
 export type CollectionSlug = "weddings" | "corporate" | "birthdays" | "festive" | "thank-you";
@@ -156,7 +156,7 @@ export const products: Product[] = [
   },
   {
     slug: "brand-welcome-kit",
-    name: "Men's Gift Box",
+    name: "Men's Gift Box (personal)",
     collection: "corporate",
     price: 57750,
     blurb: "Onboarding gifts that make the first day feel considered.",
@@ -222,18 +222,6 @@ export const products: Product[] = [
     image: bevrageHampers,
   },
   {
-    slug: "wedding-souvenirs-festive",
-    name: "Wedding Souvenirs",
-    collection: "festive",
-    price: 2000,
-    moq: 12,
-    blurb: "Table souvenirs your guests will actually take home.",
-    description:
-      "Wrapped, tagged and ready for the table — keepsakes for the people who came to celebrate.",
-    contents: ["Keepsake souvenir", "Printed card", "Ribbon tie"],
-    image: weddingSouvenirs,
-  },
-  {
     slug: "amber-hour-set",
     name: "Wedding Souvenirs",
     collection: "weddings",
@@ -273,7 +261,7 @@ export const products: Product[] = [
     slug: "keepsake-mug-set",
     name: "Souvenirs",
     collection: "thank-you",
-    price: 18000,
+    price: 1800,
     moq: 10,
     blurb: "A gold-lined mug that outlives the occasion.",
     description:
