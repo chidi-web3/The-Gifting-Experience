@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import epicTasteFood2 from "@/assets/gift-epic-taste-food2.jpg";
 import epicTasteFood4 from "@/assets/defi-epic-taste-food4.jpg";
 import epicTasteFoodtray from "@/assets/epic-taste-foodtray.jpeg";
+import mediumBasicFoodTray from "@/assets/Medium Basic Food Tray.jpeg";
 import { Container, PageHeader } from "@/components/site/Section";
 import { Reveal } from "@/components/site/Reveal";
 import { EnquiryForm } from "@/components/site/EnquiryForm";
@@ -30,7 +30,7 @@ const tasteCollections = [
   {
     name: "Native Taste",
     blurb: "Jollof, egusi, puff-puff and the classics — cooked from memory and served like home.",
-    image: epicTasteFood2,
+    image: mediumBasicFoodTray,
   },
   {
     name: "Occasional Taste",

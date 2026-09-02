@@ -27,6 +27,11 @@ export function ProductCard({ product, delay = 0 }: { product: Product; delay?: 
           <span className="shrink-0 text-sm text-primary">{formatPrice(product.price)}</span>
         </div>
         <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{product.blurb}</p>
+        {product.moq && (
+          <p className="mt-1 text-[0.68rem] uppercase tracking-[0.18em] text-muted-foreground">
+            Per piece · Min. order {product.moq}
+          </p>
+        )}
       </Link>
     </Reveal>
   );

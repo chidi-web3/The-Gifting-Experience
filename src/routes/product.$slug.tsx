@@ -85,6 +85,11 @@ function ProductPage() {
           <Reveal delay={100}>
             <h1 className="font-display text-5xl leading-tight sm:text-6xl">{product.name}</h1>
             <p className="mt-5 text-xl text-primary">{formatPrice(product.price)}</p>
+            {product.moq && (
+              <p className="mt-1 text-[0.7rem] uppercase tracking-[0.18em] text-muted-foreground">
+                Per piece · Minimum order {product.moq}
+              </p>
+            )}
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
               {product.description}
             </p>
