@@ -34,9 +34,6 @@ function CollectionsIndex() {
 
       <Container className="py-12">
         <Reveal className="flex flex-wrap gap-3">
-          <span className="rounded-sm border border-primary px-5 py-2.5 text-[0.7rem] uppercase tracking-[0.2em] text-primary">
-            All gifts
-          </span>
           {collections.map((c) => (
             <Link
               key={c.slug}

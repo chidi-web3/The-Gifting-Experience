@@ -1,8 +1,6 @@
-import wedding from "@/assets/gift-wedding.jpg";
 import corporate from "@/assets/gift-corporate.jpg";
 import birthday from "@/assets/gift-birthday.jpg";
 import festive from "@/assets/gift-festive.jpg";
-import thankyou from "@/assets/gift-thankyou.jpg";
 import souvenir from "@/assets/gift-souvenir.jpg";
 import premiumSet from "@/assets/Premium Set.jpeg";
 import simpleFemaleBox from "@/assets/Simple Female Box.jpeg";
@@ -17,7 +15,7 @@ import souvenirs4 from "@/assets/Souvenirs4.jpeg";
 import mensGiftBox from "@/assets/mens-gift-box.jpeg";
 import souvenirs1 from "@/assets/Souvenirs1.jpeg";
 
-export type CollectionSlug = "weddings" | "corporate" | "birthdays" | "festive" | "thank-you";
+export type CollectionSlug = "corporate" | "birthdays" | "festive" | "souvenirs";
 
 export interface Collection {
   slug: CollectionSlug;
@@ -41,14 +39,6 @@ export interface Product {
 }
 
 export const collections: Collection[] = [
-  {
-    slug: "weddings",
-    name: "Weddings",
-    tagline: "For the vows and everyone who witnessed them",
-    story:
-      "Bridal party boxes, guest souvenirs and thank-you tokens, wrapped in ivory and gold so they sit beautifully beside the day itself.",
-    image: wedding,
-  },
   {
     slug: "corporate",
     name: "Corporate",
@@ -74,12 +64,12 @@ export const collections: Collection[] = [
     image: festive,
   },
   {
-    slug: "thank-you",
-    name: "Thank You",
-    tagline: "Small gestures, said properly",
+    slug: "souvenirs",
+    name: "Souvenirs",
+    tagline: "Keepsakes that get taken home",
     story:
-      "Understated pieces for the moments that deserve more than a message — a candle, a card, a ribbon tied by hand.",
-    image: thankyou,
+      "Small keepsakes and table souvenirs for guests — wrapped, tagged and priced for volume, finished like a single considered gift.",
+    image: souvenir,
   },
 ];
 
@@ -87,7 +77,7 @@ export const products: Product[] = [
   {
     slug: "the-signature-hamper",
     name: "Premium Set",
-    collection: "festive",
+    collection: "corporate",
     price: 50000,
     blurb: "Our signature premium box, wrapped to be opened slowly.",
     description:
@@ -106,7 +96,7 @@ export const products: Product[] = [
   {
     slug: "ivory-vow-box",
     name: "Simple Female Box",
-    collection: "weddings",
+    collection: "birthdays",
     price: 33000,
     blurb: "A refined little box made for her.",
     description:
@@ -118,7 +108,7 @@ export const products: Product[] = [
   {
     slug: "guest-souvenir-set",
     name: "Souvenir",
-    collection: "weddings",
+    collection: "souvenirs",
     price: 1850,
     moq: 20,
     blurb: "A keepsake your guests will actually take home.",
@@ -142,7 +132,7 @@ export const products: Product[] = [
   {
     slug: "brand-welcome-kit",
     name: "Men's Gift Box (personal)",
-    collection: "corporate",
+    collection: "birthdays",
     price: 57750,
     blurb: "A considered gift box built for him.",
     description:
@@ -194,7 +184,7 @@ export const products: Product[] = [
   {
     slug: "amber-hour-set",
     name: "Wedding Souvenirs",
-    collection: "weddings",
+    collection: "souvenirs",
     price: 2000,
     moq: 12,
     blurb: "Keepsakes your wedding guests will treasure.",
@@ -207,7 +197,7 @@ export const products: Product[] = [
   {
     slug: "lavender-thank-you",
     name: "Souvenir",
-    collection: "thank-you",
+    collection: "souvenirs",
     price: 1500,
     moq: 12,
     blurb: "A small keepsake to say thank you.",
@@ -219,7 +209,7 @@ export const products: Product[] = [
   {
     slug: "gratitude-duo",
     name: "Men's Gift Box",
-    collection: "thank-you",
+    collection: "birthdays",
     price: 78500,
     blurb: "A premium boxed gift for him.",
     description:
@@ -230,7 +220,7 @@ export const products: Product[] = [
   {
     slug: "keepsake-mug-set",
     name: "Souvenirs",
-    collection: "thank-you",
+    collection: "souvenirs",
     price: 1800,
     moq: 10,
     blurb: "Simple keepsakes that outlive the occasion.",

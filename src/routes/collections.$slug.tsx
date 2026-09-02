@@ -43,12 +43,6 @@ function CollectionPage() {
 
       <Container className="py-12">
         <Reveal className="flex flex-wrap gap-3">
-          <Link
-            to="/collections"
-            className="rounded-sm border border-border px-5 py-2.5 text-[0.7rem] uppercase tracking-[0.2em] text-muted-foreground transition-colors hover:border-primary hover:text-primary"
-          >
-            All gifts
-          </Link>
           {collections.map((c) => (
             <Link
               key={c.slug}
