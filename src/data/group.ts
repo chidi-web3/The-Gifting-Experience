@@ -114,5 +114,5 @@ export const group = {
   email: "hellodefigroup@gmail.com",
   phone: "08063938828",
   location: "Ogba, Lagos, Nigeria",
-  hours: "Mon–Sat, 9am – 6pm",
+  hours: "Mon–Sat, 24hrs services",
 } as const;
