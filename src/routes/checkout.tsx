@@ -105,7 +105,7 @@ function CheckoutPage() {
               `Order details:`,
               detailsText,
               ``,
-              `Can we go ahead with this order?`,
+              `We operate 24hrs service.`,
             ]
               .filter(Boolean)
               .join("\n");
